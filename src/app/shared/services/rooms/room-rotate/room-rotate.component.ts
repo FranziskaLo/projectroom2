@@ -4,7 +4,6 @@ import { Http, Response } from '@angular/http';
 import { NewRoomsComponent } from '../../../../home/landingpage-diashow/new-rooms/new-rooms.component';
 import { RoomBackendService } from '../room-backend/roomBackend.service';
 
-// In-Memory... wenn es funktioniert... BITTE NICHT IN NEW ROOMS LASSEN!
 import { RoomService } from '../room-backend/room.service';
 
 @Component({
@@ -20,20 +19,20 @@ export class RoomRotateComponent implements OnInit {
 
   constructor(http: Http, private roomBackendService: RoomBackendService, private roomService: RoomService) { }
 
-  public getRooms = (data) => {
-    this.rooms = data.standardRooms;
-  }
+  // public getRooms = (data) => {
+  //   this.rooms = data.standardRooms;
+  // }
 
   ngOnInit() {
-    this.roomBackendService.getRooms().subscribe(
-      this.getRooms
-    );
-    // this.getRoomsFromAPI();
+    // this.roomBackendService.getRooms().subscribe(
+    //  this.getRooms
+    // );
+    this.getRoomsFromAPI();
   }
 
-  // getRoomsFromAPI(): void {
-  //   this.roomService.getRooms().then(rooms => this.rooms = rooms);
-  // }
+  getRoomsFromAPI(): void {
+    this.roomService.getRooms().then(rooms => this.rooms = rooms);
+  }
 
   pSelectedRoom = 2;
   mSelectedRoom = 1;
