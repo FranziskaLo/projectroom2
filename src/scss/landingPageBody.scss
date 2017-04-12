@@ -1,0 +1,168 @@
+.rooms {
+  &.row {
+    margin: 0;
+    background-color: $mainBackground;
+    font-family: $mainFontFamily;
+
+    &.exeption {
+      color: $mainOrange;
+    }
+  }
+
+  h1 {
+    margin: 25px 0 25px 0;
+    font-size: 50px;
+  }
+}
+
+.welcome-text {
+  background-color: $mainBackground;
+  text-align: -webkit-center;
+
+  &.row {
+    margin: 0;
+  }
+
+  .text-section {
+    width: 500px;
+    text-align: justify;
+  }
+
+  .signin {
+    .signin-box {
+      width: 500px;
+      background-color: $mainblue;
+      margin-top: 20px;
+      font-size: 60px;
+      font-family: $mainFontFamily;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .login {
+    margin-top: 10px;
+
+    a {
+      text-decoration: underline;
+      color: $mainblue;
+      font-weight: bold;
+    }
+  }
+}
+
+.signs {
+  height: 500px;
+  background-color: $mainBackground;
+  padding: 0;
+
+  &.row {
+    margin: 0;
+  }
+}
+
+.imageDetails {
+  max-width: 350px;
+}
+
+.imageSide {
+  cursor: pointer;
+  filter: brightness(20%);
+}
+
+.infobox {
+  font-weight: bold;
+  margin-top: -70px;
+  height: 70px;
+  width: 350px;
+  background-color: #3a3a3a;
+  opacity: 0.5;
+  // margin-left: 12px;
+}
+
+.roomdetails_bright {
+  color: white;
+  margin-bottom: 20px;
+
+ .infobox_bright {
+  height: 35px;
+  width: 110px;
+  background-color: darkgray;
+  opacity: 0.1;
+  margin-top: -52px;
+  margin-left: 180px;
+}
+
+ .room_name {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 25px;
+    font-size: 16px;
+  }
+
+ .room_location {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 25px;
+    font-size: 12px;
+  }
+
+  .room_price {
+    position: absolute;
+    margin-top: -34px;
+    margin-left: 190px;
+    font-size: 23px;
+  }
+
+  .room_currency {
+    position: absolute;
+    margin-top: -32px;
+    margin-left: 300px;
+    font-size: 20px;
+  }
+}
+
+.roomdetails {
+  color: grey;
+  margin-bottom: 20px;
+
+  .infobox_bright {
+  height: 35px;
+  width: 110px;
+  background-color: darkgray;
+  opacity: 0.1;
+  margin-top: -52px;
+  margin-left: 180px;
+}
+
+ .room_name {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 25px;
+    font-size: 16px;
+  }
+
+ .room_location {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 25px;
+    font-size: 12px;
+  }
+
+  .room_price {
+    position: absolute;
+    margin-top: -34px;
+    margin-left: 190px;
+    font-size: 23px;
+  }
+
+  .room_currency {
+    position: absolute;
+    margin-top: -32px;
+    margin-left: 300px;
+    font-size: 20px;
+  }
+}

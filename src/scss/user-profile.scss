@@ -1,0 +1,16 @@
+.user-profile-styles {
+  background-color: #38353B;
+  color: #fff;
+
+  h1 {
+    color: $mainblue;
+    font-family: $mainFontFamily;
+    letter-spacing: 1px;
+    margin: 10px 0 10px 0;
+    font-size: 60px;
+  }
+
+  .profile-pic {
+    max-height: 130px;
+  }
+}

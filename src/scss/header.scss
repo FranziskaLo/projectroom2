@@ -1,0 +1,23 @@
+.header {
+  &.navbar {
+   margin-bottom: 0;
+   border: none;
+  }
+
+  .navbar-brand {
+    color: $mainblack !important;
+    font-family: $mainFontFamily;
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  .header-link {
+    color: $mainblack;
+    text-decoration: none;
+    padding-right: 15px;
+  }
+
+  .nav.navbar-nav.navbar-right {
+    padding-top: 15px;
+  }
+}

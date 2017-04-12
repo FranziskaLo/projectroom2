@@ -1,0 +1,28 @@
+//main styles
+
+$mainblack:#232323;
+$mainblue: #29C1B5;
+// #75D1C2
+$mainBackground: #FCFCFC;
+$mainOrange: #FFD27F;
+
+$mainFontFamily: 'League Gothic';
+
+ body {
+    padding: 0 200px 0 200px;
+  }
+  @media (max-width: 990px) {
+    body {
+      padding: 0;
+    }
+  }
+
+//after styles
+
+@import url(http://allfont.net/allfont.css?fonts=league-gothic);
+@import 'header.scss';
+@import 'headerImg.scss';
+@import 'landingPageBody';
+@import 'footer.scss';
+@import 'quote-carousel.scss';
+@import 'user-profile.scss';

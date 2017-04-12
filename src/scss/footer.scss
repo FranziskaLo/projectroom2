@@ -1,0 +1,47 @@
+$fullWidth: 400px;
+$halfWidth: $fullWidth / 2;
+$fullHeight: 200px;
+$halfHeight: $fullHeight / 2;
+
+.footer {
+  background-color: #f8f8f8;
+  height: $fullHeight;
+  text-align: -webkit-center;
+
+  &.row {
+    margin: 0;
+  }
+
+  .container {
+    width: $fullWidth;
+
+    .all-links {
+      width: $fullWidth;
+      height: $halfHeight;
+      margin-top: 30px;
+
+      .links-left {
+      width: $halfWidth;
+      float: left;
+      text-align: left;
+
+      a {
+        color: $mainblack;
+      }
+    }
+
+    .links-right {
+      text-align: left;
+
+      a {
+      color: $mainblack;
+    }
+    }
+ }
+
+    .logo {
+      font-family: $mainFontFamily;
+      font-size: 40px;
+    }
+  }
+}

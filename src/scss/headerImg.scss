@@ -1,0 +1,36 @@
+.headerImg {
+  .preImg {
+    background-image: url(https://static.pexels.com/photos/30342/pexels-photo-30342.jpg);
+    height: 350px;
+    width: auto;
+    background-size: cover;
+    padding-top: 30px;
+
+
+    .title {
+    color: $mainblue;
+    font-size: 110px;
+    font-family: $mainFontFamily, arial;
+    letter-spacing: 3px;
+    text-align: center;
+    }
+
+    .search-section {
+      text-align: center;
+
+      .searchbar {
+        width: 350px;
+
+        .input-group-btn {
+          width: 40px;
+
+          .btn-default {
+            border: none;
+            background-color: transparent;
+            color: $mainblue;
+          }
+        }
+      }
+    }
+  }
+}

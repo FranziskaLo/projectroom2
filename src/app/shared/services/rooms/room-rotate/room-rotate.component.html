@@ -1,0 +1,35 @@
+<div class="row" *ngIf="rooms.length>0">
+  <div class="col-lg-4 text-center roomdetails">
+    <div style="max-width: 350px;">
+      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="next()" src="{{ rooms[pSelectedRoom].href }}" />
+      <div class="infobox"> </div>
+    </div>
+    <div class="room_name">{{ rooms[pSelectedRoom].name }}</div>
+    <div class="room_location">in {{ rooms[pSelectedRoom].location }}</div>
+    <div class="infobox_bright"></div>
+    <div class="room_price">{{ rooms[pSelectedRoom].price }}</div>
+    <div class="room_currency">€ / h</div>
+  </div>
+  <div class="col-lg-4 text-center roomdetails_bright">
+    <div style="max-width: 350px;">
+      <img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].href }}" />
+      <div class="infobox"> </div>
+    </div>
+    <div class="room_name">{{ rooms[mSelectedRoom].name }}</div>
+    <div class="room_location">in {{ rooms[mSelectedRoom].location }}</div>
+    <div class="infobox_bright"></div>
+    <div class="room_price">{{ rooms[mSelectedRoom].price }}</div>
+    <div class="room_currency">€ / h</div>
+  </div>
+  <div class="col-lg-4 text-center roomdetails">
+    <div style="max-width: 350px;">
+      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="previous()" src="{{ rooms[nSelectedRoom].href }}" />
+      <div class="infobox"> </div>
+    </div>
+    <div class="room_name">{{ rooms[nSelectedRoom].name }}</div>
+    <div class="room_location">in {{ rooms[nSelectedRoom].location }}</div>
+    <div class="infobox_bright"></div>
+    <div class="room_price">{{ rooms[nSelectedRoom].price }}</div>
+    <div class="room_currency">€ / h</div>
+  </div>
+</div>
