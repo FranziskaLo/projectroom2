@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/services/rooms/room-backend/in-memory-data.service';
 import { RoomService } from './shared/services/rooms/room-backend/room.service';
+import { AuthService } from './auth/auth.service';
 
 import { BaseRequestOptions, Http } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
@@ -23,6 +24,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { GLOBALCONFIGService } from './shared/services/global_config/GLOBALCONFIG.service';
 import { RoomBackendService } from './shared/services/rooms/room-backend/roomBackend.service';
 import { ResthelperService } from './shared/services/global_config/resthelper.service';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 @NgModule({
@@ -32,6 +35,8 @@ import { ResthelperService } from './shared/services/global_config/resthelper.se
     FooterComponent,
     RoomProfileComponent,
     UserProfileComponent,
+    SigninComponent,
+    SignupComponent,
   ],
   imports: [
     HomeModule,
@@ -41,7 +46,7 @@ import { ResthelperService } from './shared/services/global_config/resthelper.se
     AppRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
-  providers: [GLOBALCONFIGService, ResthelperService, RoomBackendService, MockBackend, BaseRequestOptions, RoomService],
+  providers: [GLOBALCONFIGService, ResthelperService, RoomBackendService, MockBackend, BaseRequestOptions, RoomService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
