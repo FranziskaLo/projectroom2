@@ -26,6 +26,7 @@ import { RoomBackendService } from './shared/services/rooms/room-backend/roomBac
 import { ResthelperService } from './shared/services/global_config/resthelper.service';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { SignupComponent } from './auth/signup/signup.component';
     UserProfileComponent,
     SigninComponent,
     SignupComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     HomeModule,
