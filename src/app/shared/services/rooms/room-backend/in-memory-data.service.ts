@@ -31,7 +31,7 @@ export class InMemoryDataService implements InMemoryDbService {
         price: '8,00'
       },
       {
-        href: 'http://library.duke.edu/apps/media/floorplans/roommockup/bostock_fl03_carpenter_reading_room_01.jpg.500x300_q85_autocrop_crop-smart.jpg',
+        href: 'https://images.pexels.com/photos/77931/pexels-photo-77931.jpeg?w=940&h=650&auto=compress&cs=tinysrgb',
         id: 5,
         location: 'Ort 5',
         name: 'Testraum 5',

@@ -1,6 +1,6 @@
-<div class="row" *ngIf="rooms.length>0">
+<div class="row bgcolordia" *ngIf="rooms.length>0">
   <div class="col-lg-4 text-center roomdetails">
-    <div style="max-width: 350px;">
+    <div class="roompicture">
       <img class="imageDetails imageSide" *ngIf="showRooms" (click)="next()" src="{{ rooms[pSelectedRoom].href }}" />
       <div class="infobox"> </div>
     </div>
@@ -11,7 +11,7 @@
     <div class="room_currency">€ / h</div>
   </div>
   <div class="col-lg-4 text-center roomdetails_bright">
-    <div style="max-width: 350px;">
+    <div class="roompicture">
       <img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].href }}" />
       <div class="infobox"> </div>
     </div>
@@ -22,7 +22,7 @@
     <div class="room_currency">€ / h</div>
   </div>
   <div class="col-lg-4 text-center roomdetails">
-    <div style="max-width: 350px;">
+    <div class="roompicture">
       <img class="imageDetails imageSide" *ngIf="showRooms" (click)="previous()" src="{{ rooms[nSelectedRoom].href }}" />
       <div class="infobox"> </div>
     </div>
