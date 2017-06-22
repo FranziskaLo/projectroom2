@@ -14,6 +14,10 @@ $mainFontFamily: 'League Gothic';
     }
   }
 
+  html, body {
+  height: 100%;
+}
+
 //after styles
 
 @import url(http://allfont.net/allfont.css?fonts=league-gothic);
@@ -23,3 +27,4 @@ $mainFontFamily: 'League Gothic';
 @import 'footer.scss';
 @import 'quote-carousel.scss';
 @import 'user-profile.scss';
+@import 'modal.scss';

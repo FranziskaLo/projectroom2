@@ -27,6 +27,7 @@ import { ResthelperService } from './shared/services/global_config/resthelper.se
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { ModalComponent } from './shared/services/modal/modal.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     SigninComponent,
     SignupComponent,
     PageNotFoundComponent,
+    ModalComponent,
   ],
   imports: [
     HomeModule,

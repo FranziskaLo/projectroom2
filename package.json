@@ -25,9 +25,11 @@
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "jQuery": "^1.7.4",
+    "jquery": "^3.2.1",
     "rxjs": "^5.1.0",
     "sass": "^0.5.0",
     "scss": "^0.2.4",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
