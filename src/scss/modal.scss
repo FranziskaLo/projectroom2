@@ -1,6 +1,6 @@
 /* MODAL STYLES
 -------------------------------*/
-modal {
+app-modal {
     /* modals are hidden by default */
     display: none;
 
@@ -11,6 +11,7 @@ modal {
         right: 0;
         bottom: 0;
         left: 0;
+        display: block;
 
         /* z-index must be higher than .modal-background */
         z-index: 1000;
