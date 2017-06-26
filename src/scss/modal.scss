@@ -20,8 +20,7 @@ app-modal {
         overflow: auto;
 
         .modal-body {
-            padding: 20px;
-            background: #fff;
+            padding: 12px;
 
             /* margin exposes part of the modal background */
             margin: 40px;
@@ -48,4 +47,43 @@ app-modal {
 body.modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
     overflow: hidden;
+}
+
+.modal-register {
+  .modal {
+    margin-top: 120px;
+
+     .modal-body {
+      width: 560px;
+      background-color: $mainBackground;
+      margin: auto !important;
+
+       .tab {
+        overflow: hidden;
+
+          button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 44px;
+            text-transform: uppercase;
+            font-family: $mainFontFamily;
+            text-decoration: underline;
+
+
+          &:focus {
+              color: $mainblue;
+          }
+        }
+      }
+
+      .tabcontent {
+        display: none;
+        border-top: none;
+      }
+    }
+  }
 }

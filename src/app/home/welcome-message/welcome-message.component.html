@@ -22,10 +22,21 @@
   </div>
 </div>
 
-<app-modal id="register">
+<app-modal id="register" class="modal-register">
   <div class="modal">
     <div class="modal-body">
-      <h1 style="height: 500px">A Tall Custom Modal!</h1>
+      <div class="tab">
+        <button class="tablinks" (click)="openTab(event, 'Anmelden')">Anmelden</button>
+        <button class="tablinks" (click)="openTab(event, 'Registrieren')">Registrieren</button>
+      </div>
+
+      <div id="Anmelden" class="tabcontent">
+        <p>London is the capital city of England.</p>
+      </div>
+
+      <div id="Registrieren" class="tabcontent">
+        <p>Paris is the capital of France.</p>
+      </div>
       <button (click)="closeModal('register');">Close</button>
     </div>
   </div>
