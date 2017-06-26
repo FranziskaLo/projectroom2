@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { AuthService } from '../auth.service';
-
 import { ModalService } from '../../shared/services/modal/modal.service';
 
 
@@ -12,12 +11,10 @@ import { ModalService } from '../../shared/services/modal/modal.service';
   templateUrl: './signup.component.html'
 })
 export class SignupComponent implements OnInit {
-  private bodyText: string;
 
   constructor(private authService: AuthService, private modalService: ModalService) { }
 
   ngOnInit() {
-    this.bodyText = 'This text can be updated in modal 1';
   }
 
   openModal(id: string) {

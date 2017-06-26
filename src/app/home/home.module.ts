@@ -12,6 +12,7 @@ import { WelcomeMessageComponent } from './welcome-message/welcome-message.compo
 import { FounderSectionComponent } from './founder-section/founder-section.component';
 import { MemberCommentsComponent } from './member-comments/member-comments.component';
 import { RoomRotateComponent } from '../shared/services/rooms/room-rotate/room-rotate.component';
+import { ModalComponent } from '../shared/services/modal/modal.component';
 
 
 
@@ -28,6 +29,7 @@ import { RoomRotateComponent } from '../shared/services/rooms/room-rotate/room-r
     FounderSectionComponent,
     MemberCommentsComponent,
     RoomRotateComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule

@@ -20,10 +20,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing-module';
 import { RoomProfileComponent } from './room-profile/room-profile.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { ModalComponent } from './shared/services/modal/modal.component';
 
 import { GLOBALCONFIGService } from './shared/services/global_config/GLOBALCONFIG.service';
 import { RoomBackendService } from './shared/services/rooms/room-backend/roomBackend.service';
@@ -38,10 +36,8 @@ import { ModalService } from './shared/services/modal/modal.service';
     FooterComponent,
     RoomProfileComponent,
     UserProfileComponent,
-    SigninComponent,
     SignupComponent,
     PageNotFoundComponent,
-    ModalComponent,
   ],
   imports: [
     HomeModule,
