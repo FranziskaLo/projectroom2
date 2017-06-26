@@ -83,6 +83,21 @@ body.modal-open {
       .tabcontent {
         display: none;
         border-top: none;
+
+        form {
+          margin-top: 20px;
+
+          .button_style {
+            width: 100%;
+            margin-top: 35px;
+            height: 70px;
+            background-color: $mainblue;
+            text-transform: uppercase;
+            color: $mainBackground;
+            font-family: $mainFontFamily;
+            font-size: 40px;
+          }
+        }
       }
     }
   }

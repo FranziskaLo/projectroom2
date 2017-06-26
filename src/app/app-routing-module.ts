@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { RoomProfileComponent } from './room-profile/room-profile.component';
-import { SignupComponent } from './auth/signup/signup.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
@@ -12,7 +11,6 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'your-profile', component: UserProfileComponent },
   { path: 'your-room', component: RoomProfileComponent },
-  { path: 'signup', component: SignupComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' }
 ];
