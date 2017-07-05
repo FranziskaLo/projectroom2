@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { AuthService } from '../../auth/auth.service';
+import { AuthService } from '../../shared/services/authentication/auth.service';
+import { AlertService } from '../../shared/services/authentication/alert.service';
 import { ModalService } from '../../shared/services/modal/modal.service';
 
 @Component({
@@ -11,25 +12,39 @@ import { ModalService } from '../../shared/services/modal/modal.service';
 })
 export class WelcomeMessageComponent implements OnInit {
 
-  constructor(private authService: AuthService, private modalService: ModalService) { }
+  constructor(private authService: AuthService, private modalService: ModalService, private alertService: AlertService) { }
 
   ngOnInit() {
+
   }
 
+  // Öffnen des Pop-ups
   openModal(id: string) {
     this.modalService.open(id);
   }
 
+  // Schließen des Pop-ups
   closeModal(id: string) {
     this.modalService.close(id);
   }
 
-  onSignup(form: NgForm) {
-    // const email = form.value.email;
-    // const password = form.value.password;
-    // this.authService.signupUser(email, password);
+  // Einloggen
+  onLogin(form: NgForm) {
+
   }
 
+  // Registrieren
+  onSignup(form: NgForm) {
+
+  }
+
+  // Confirm password
+  validatePassword() {
+
+  }
+
+
+  // Wechseln zwischen den Tabs
   openTab(evt, sign_tab) {
     let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName('tabcontent');

@@ -8,7 +8,8 @@ import { HomeModule } from './home/home.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/services/rooms/room-backend/in-memory-data.service';
 import { RoomService } from './shared/services/rooms/room-backend/room.service';
-import { AuthService } from './auth/auth.service';
+import { AuthService } from './shared/services/authentication/auth.service';
+import { AlertService } from './shared/services/authentication/alert.service';
 
 import { BaseRequestOptions, Http } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
@@ -46,7 +47,8 @@ import { ModalService } from './shared/services/modal/modal.service';
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [GLOBALCONFIGService, ResthelperService, RoomBackendService,
-    MockBackend, BaseRequestOptions, RoomService, AuthService, ModalService],
+    MockBackend, BaseRequestOptions, RoomService, AuthService, ModalService,
+    AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

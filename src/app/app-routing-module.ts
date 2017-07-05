@@ -10,7 +10,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'your-profile', component: UserProfileComponent },
-  { path: 'your-room', component: RoomProfileComponent },
+  { path: 'room-profile', component: RoomProfileComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' }
 ];
