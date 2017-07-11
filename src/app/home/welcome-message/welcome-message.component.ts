@@ -28,6 +28,27 @@ export class WelcomeMessageComponent implements OnInit {
     this.modalService.close(id);
   }
 
+  // Wechseln zwischen den Tabs
+  openTab(evt, sign_tab) {
+    let i, content, links;
+    content = document.getElementsByClassName('tabcontent');
+    for (i = 0; i < content.length; i++) {
+      content[i].style.display = 'none';
+    }
+    // links = document.getElementsByClassName('tablinks');
+    // for (i = 0; i < links.length; i++) {
+    //   links[i].className = links[i].className.replace(' tabblue', '');
+    // }
+    document.getElementById(sign_tab).style.display = 'block';
+    // evt.currentTarget.className += ' tabblue';
+  }
+
+  //
+  // SIMON, ab hier könnte es für dich interessant werden
+  //
+
+
+
   // Einloggen
   onLogin(form: NgForm) {
 
@@ -41,22 +62,6 @@ export class WelcomeMessageComponent implements OnInit {
   // Confirm password
   validatePassword() {
 
-  }
-
-
-  // Wechseln zwischen den Tabs
-  openTab(evt, sign_tab) {
-    let i, content, links;
-    content = document.getElementsByClassName('tabcontent');
-    for (i = 0; i < content.length; i++) {
-      content[i].style.display = 'none';
-    }
-    links = document.getElementsByClassName('tablinks');
-    for (i = 0; i < links.length; i++) {
-      links[i].className = links[i].className.replace(' tabblue', '');
-    }
-    document.getElementById(sign_tab).style.display = 'block';
-    evt.currentTarget.className += ' tabblue';
   }
 
 

@@ -35,7 +35,7 @@
         <button class="tablinks" (click)="openTab(event, 'registrieren')">Registrieren</button>
       </div>
 
-      <div id="anmelden" class="tabcontent" style="display: none;">
+      <div id="anmelden" class="tabcontent" style="display: block;">
         <form name="loginForm" (ngSubmit)="onLogin()">
           <div class="form-group">
             <label for="email">E-Mail Adresse</label>
@@ -50,7 +50,7 @@
         </form>
       </div>
 
-      <div id="registrieren" class="tabcontent" style="display: block;">
+      <div id="registrieren" class="tabcontent">
         <form (ngSubmit)="onSignup()">
           <div class="form-group">
             <label for="firstName">Vorname</label>

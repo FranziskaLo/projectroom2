@@ -10,13 +10,19 @@
   }
 
   h1 {
-    margin: 25px 0 25px 0;
+    margin: 25px 0 25px 20px;
     font-size: 50px;
   }
 }
 
 .bgcolordia {
   background-color: $mainBackground;
+  margin-right: 21px !important;
+  margin-left: 20px !important;
+
+  &.row {
+    margin: 0;
+  }
 }
 
 .roompicture {
@@ -77,7 +83,7 @@
 
 .imageSide {
   cursor: pointer;
-  filter: brightness(20%);
+  filter: brightness(40%);
 }
 
 .infobox {
@@ -183,4 +189,5 @@
   color: $mainblue;
   font-size: 13px;
   margin-top: 2px;
+  cursor: not-allowed;
 }

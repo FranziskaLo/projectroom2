@@ -31,12 +31,12 @@ export class HeaderComponent implements OnInit {
     for (i = 0; i < content.length; i++) {
       content[i].style.display = 'none';
     }
-    links = document.getElementsByClassName('tablinks');
-    for (i = 0; i < links.length; i++) {
-      links[i].className = links[i].className.replace(' tabblue', '');
-    }
+    // links = document.getElementsByClassName('tablinks');
+    // for (i = 0; i < links.length; i++) {
+    //   links[i].className = links[i].className.replace(' tabblue', '');
+    // }
     document.getElementById(sign_tab).style.display = 'block';
-    evt.currentTarget.className += ' tabblue';
+    // event.target.className += ' tabblue';
   }
 
 
