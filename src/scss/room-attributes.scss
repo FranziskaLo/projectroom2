@@ -25,7 +25,50 @@
 
     .address {
       background-color: #eee;
-      height: 145px;
+      height: 166px;
+      padding-top: 15px;
+
+      .row {
+        margin: 0;
+        margin-top: 14px;
+        height: 36px;
+        margin-left: 24px;
+
+        .col-sm-6 {
+          padding: 0;
+        }
+
+        .attr_title {
+          float: left;
+          font-family: $mainFontFamily;
+          color: $mainblack;
+          font-size: 20px;
+          margin-left: 15px;
+          margin-top: 6px;
+        }
+
+        .field_left {
+          position: absolute;
+          margin-left: 100px;
+          background-color: #d6d6d6;
+          height: 36px;
+          border-radius: 3px;
+          width: 255px;
+          padding: 8px;
+          font-family: Arial;
+        }
+
+        .field_right {
+          position: absolute;
+          margin-left: 65px;
+          background-color: #d6d6d6;
+          height: 36px;
+          border-radius: 3px;
+          width: 255px;
+          padding: 8px;
+          font-family: Arial;
+        }
+      }
     }
   }
 }
