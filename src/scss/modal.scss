@@ -72,11 +72,6 @@ body.modal-open {
             text-transform: uppercase;
             font-family: $mainFontFamily;
             text-decoration: underline;
-
-
-          &:focus {
-              color: $mainblue;
-          }
         }
       }
 
@@ -101,4 +96,8 @@ body.modal-open {
       }
     }
   }
+}
+
+.tabblue {
+  color: $mainblue !important;
 }

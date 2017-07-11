@@ -46,17 +46,17 @@ export class WelcomeMessageComponent implements OnInit {
 
   // Wechseln zwischen den Tabs
   openTab(evt, sign_tab) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName('tabcontent');
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = 'none';
+    let i, content, links;
+    content = document.getElementsByClassName('tabcontent');
+    for (i = 0; i < content.length; i++) {
+      content[i].style.display = 'none';
     }
-    tablinks = document.getElementsByClassName('tablinks');
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(' active', '');
+    links = document.getElementsByClassName('tablinks');
+    for (i = 0; i < links.length; i++) {
+      links[i].className = links[i].className.replace(' tabblue', '');
     }
     document.getElementById(sign_tab).style.display = 'block';
-    evt.currentTarget.className += ' active';
+    evt.currentTarget.className += ' tabblue';
   }
 
 
