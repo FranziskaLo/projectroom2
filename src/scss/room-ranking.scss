@@ -1,0 +1,37 @@
+.ranking {
+  background-color: $mainBackground;
+
+ .box {
+    width: 750px;
+    margin: auto;
+
+    .boxtitle {
+      text-align: left;
+      text-transform: uppercase;
+      font-family: $mainFontFamily;
+      color: $mainblue;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .col-sm-4 {
+      height: 162px;
+      background-color: #eee;
+      font-size: 13px;
+      color: $mainblack;
+      text-align: center;
+
+      .points {
+        font-family: $mainFontFamily;
+        font-size: 90px;
+      }
+
+      .text {
+        font-family: $mainFontFamily;
+        margin-top: -13px;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+    }
+ }
+}
