@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 
 // Imports for loading & configuing the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -44,6 +46,7 @@ import { ModalService } from './shared/services/modal/modal.service';
     FormsModule,
     HttpModule,
     AppRoutingModule,
+    SharedModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [GLOBALCONFIGService, ResthelperService, RoomBackendService,

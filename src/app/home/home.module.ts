@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '../shared/shared.module';
+
 import { HomeComponent } from './home.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { HomeSearchbarComponent } from './home-header/home-searchbar/home-searchbar.component';
@@ -12,7 +14,6 @@ import { WelcomeMessageComponent } from './welcome-message/welcome-message.compo
 import { FounderSectionComponent } from './founder-section/founder-section.component';
 import { MemberCommentsComponent } from './member-comments/member-comments.component';
 import { RoomRotateComponent } from '../shared/services/rooms/room-rotate/room-rotate.component';
-import { ModalComponent } from '../shared/services/modal/modal.component';
 
 
 
@@ -28,11 +29,11 @@ import { ModalComponent } from '../shared/services/modal/modal.component';
     WelcomeMessageComponent,
     FounderSectionComponent,
     MemberCommentsComponent,
-    RoomRotateComponent,
-    ModalComponent
+    RoomRotateComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class HomeModule {
