@@ -1,0 +1,31 @@
+.room-attr {
+ background-color: $mainBackground;
+
+  .box {
+    width: 750px;
+    margin: auto;
+
+    .boxtitle {
+      text-align: left;
+      text-transform: uppercase;
+      font-family: $mainFontFamily;
+      color: $mainblue;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+
+    .description {
+      height: 145px;
+      background-color: #eee;
+      padding: 18px;
+      font-family: Arial;
+      font-size: 13px;
+      color: $mainblack;
+    }
+
+    .address {
+      background-color: #eee;
+      height: 145px;
+    }
+  }
+}
