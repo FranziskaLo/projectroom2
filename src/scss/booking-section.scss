@@ -1,0 +1,37 @@
+.booking {
+  background-color: $mainBackground;
+
+  .content {
+    width: 700px;
+    height: 400px;
+    background-color: red;
+    margin: auto;
+
+    .title {
+      float: left;
+      background-color: $mainBackground;
+      color: $mainblue;
+      font-family: $mainFontFamily;
+      font-size: 100px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      width: 330px;
+      height: 133px;
+    }
+
+    .pricebox {
+      background-color: yellow;
+      height: 133px;
+      width: 370px;
+      margin-left: 330px;
+    }
+
+    .data {
+      background-color: blue;
+    }
+
+    .lateredit {
+      background-color: $mainblue;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.room_header {
+  .roomImg {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/22/Petrus_%28London%29_Kitchen.jpg);
+    height: 350px;
+    width: auto;
+    background-size: cover;
+    padding-top: 30px;
+
+
+    .title {
+    color: $mainblack;
+    padding: 0px 10px;
+    background-color: $mainblue;
+    font-size: 29px;
+    font-family: arial;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    margin-top: 96px;
+    }
+  }
+}

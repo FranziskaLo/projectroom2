@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { HomeModule } from './home/home.module';
+import { RoomProfileModule } from './room-profile/room-profile.module';
 import { SharedModule } from './shared/shared.module';
 
 // Imports for loading & configuing the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/services/rooms/room-backend/in-memory-data.service';
 import { RoomService } from './shared/services/rooms/room-backend/room.service';
+
 import { AuthService } from './shared/services/authentication/auth.service';
 import { AlertService } from './shared/services/authentication/alert.service';
 
@@ -21,8 +23,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { AppRoutingModule } from './app-routing-module';
-import { RoomProfileComponent } from './room-profile/room-profile.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 import { GLOBALCONFIGService } from './shared/services/global_config/GLOBALCONFIG.service';
@@ -36,8 +36,6 @@ import { ModalService } from './shared/services/modal/modal.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RoomProfileComponent,
-    UserProfileComponent,
     PageNotFoundComponent,
   ],
   imports: [
@@ -47,6 +45,7 @@ import { ModalService } from './shared/services/modal/modal.service';
     HttpModule,
     AppRoutingModule,
     SharedModule,
+    RoomProfileModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [GLOBALCONFIGService, ResthelperService, RoomBackendService,

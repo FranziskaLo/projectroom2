@@ -21,10 +21,12 @@ $mainFontFamily: 'League Gothic';
 //after styles
 
 @import url(http://allfont.net/allfont.css?fonts=league-gothic);
-@import 'header.scss';
-@import 'headerImg.scss';
+@import 'header';
+@import 'headerImg';
 @import 'landingPageBody';
-@import 'footer.scss';
-@import 'quote-carousel.scss';
-@import 'user-profile.scss';
-@import 'modal.scss';
+@import 'footer';
+@import 'quote-carousel';
+@import 'user-profile';
+@import 'modal';
+@import 'room-header';
+@import 'booking-section';
