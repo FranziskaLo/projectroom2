@@ -16,6 +16,16 @@ $mainFontFamily: 'League Gothic';
 
   html, body {
   height: 100%;
+
+  // Scrollbar in Chrome
+
+  ::-webkit-scrollbar {
+  width: 5px;
+}
+
+ ::-webkit-scrollbar-thumb {
+  background: #adadad;
+}
 }
 
 //after styles

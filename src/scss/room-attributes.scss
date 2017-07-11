@@ -5,6 +5,24 @@
     width: 750px;
     margin: auto;
 
+    .col-sm-6 {
+      padding: 0;
+
+      .charac {
+        background-color: #eee;
+        margin-bottom: 20px;
+        height: 210px;
+        overflow: auto;
+
+        .row {
+          margin: 0;
+          margin-bottom: 14px;
+          height: 36px;
+          background-color: red;
+        }
+      }
+    }
+
     .boxtitle {
       text-align: left;
       text-transform: uppercase;
@@ -33,10 +51,6 @@
         margin-top: 14px;
         height: 36px;
         margin-left: 24px;
-
-        .col-sm-6 {
-          padding: 0;
-        }
 
         .attr_title {
           float: left;
