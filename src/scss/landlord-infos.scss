@@ -8,5 +8,87 @@
     margin-top: 55px;
     height: 400px;
     margin-bottom: 25px;
+    color: $mainBackground;
+
+    .row {
+      margin: 0;
+
+      &.upper {
+        height: 200px;
+
+      }
+
+      .col-sm-9 {
+        padding: 0;
+        margin-left: 14px;
+        width: 548px;
+
+        .infotext {
+          background-color: #383838;
+          margin-left: 10px;
+          margin-right: 10px;
+          height: 133px;
+          border-radius: 4px;
+          padding: 17px;
+        }
+      }
+
+      &.data {
+       background-color: #383838;
+       margin-top: 13px;
+       margin-left: 10px;
+       margin-right: 10px;
+       height: 100px;
+
+       .col-sm-3 {
+            text-align: center;
+            font-family: $mainFontFamily;
+            text-transform: uppercase;
+
+            .user_data {
+              font-size: 37px;
+              margin-top: 16px;
+            }
+
+            .text {
+              font-size: 15px;
+              margin-top: -5px;
+            }
+          }
+      }
+
+      &.contact {
+        margin-top: 6px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 70px;
+
+        .title {
+          float: left;
+          font-family: $mainFontFamily;
+          text-transform: uppercase;
+          font-size: 58px;
+          color: $mainblue;
+        }
+
+        .send_message {
+          float: left;
+          text-align: center;
+          margin-left: 43px;
+          color: $mainblue;
+          font-family: $mainFontFamily;
+          margin-top: 12px;
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+
+        .phone_mail {
+          float: left;
+          font-family: $mainFontFamily;
+          margin-left: 48px;
+          margin-top: 24px;
+        }
+      }
+    }
   }
 }
