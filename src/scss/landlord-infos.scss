@@ -10,6 +10,75 @@
     margin-bottom: 25px;
     color: $mainBackground;
 
+    .realfriend {
+      position: absolute;
+      background-color: #FFFD01;
+      font-family: $mainFontFamily;
+      text-transform: uppercase;
+      color: $mainblack;
+      font-size: 20px;
+      padding: 6px;
+      border-radius: 5px;
+      margin-top: -186px;
+      right: 0;
+      margin-right: 20px;
+    }
+
+    .realfriend_d1 {
+      background-color: #FFFD01;
+      height: 18px;
+      width: 39px;
+      position: absolute;
+      margin-top: -185px;
+      right: 0;
+      margin-right: 146px;
+      border-radius: 2px;
+    }
+
+    .realfriend_d2 {
+      background-color: #FFFD01;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      margin-top: -164px;
+      right: 0;
+      margin-right: 146px;
+      border-radius: 2px;
+    }
+
+    .realfriend_d3 {
+      background-color: #FFFD01;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      margin-top: -146px;
+      right: 0;
+      margin-right: 235px;
+      border-radius: 2px;
+    }
+
+    .realfriend_d4 {
+      background-color: #FFFD01;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      margin-top: -209px;
+      right: 0;
+      margin-right: 294px;
+      border-radius: 2px;
+    }
+
+    .realfriend_d5 {
+      background-color: #FFFD01;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      margin-top: -186px;
+      right: 0;
+      margin-right: 352px;
+      border-radius: 2px;
+    }
+
     .row {
       margin: 0;
 
