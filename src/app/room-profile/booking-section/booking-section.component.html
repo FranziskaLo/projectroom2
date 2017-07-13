@@ -10,9 +10,10 @@
         </div>
       </div>
       <div class="data">
-        <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+        <input class="picker-input" [ngModel]="moment | date: 'short'" [(dateTimePicker)]="moment" [mode]="'dropdown'" readonly>
+        <!-- <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
         <button mdSuffix [mdDatepickerToggle]="picker"></button>
-        <md-datepicker #picker></md-datepicker>
+        <md-datepicker #picker></md-datepicker> -->
       </div>
       <button class="btn button_style" type="submit">Sofort buchen</button>
     </div>
