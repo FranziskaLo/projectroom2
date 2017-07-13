@@ -10,7 +10,9 @@
         </div>
       </div>
       <div class="data">
-        Hauptding
+        <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+        <button mdSuffix [mdDatepickerToggle]="picker"></button>
+        <md-datepicker #picker></md-datepicker>
       </div>
       <button class="btn button_style" type="submit">Sofort buchen</button>
     </div>

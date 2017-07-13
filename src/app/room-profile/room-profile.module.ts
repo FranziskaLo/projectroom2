@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SharedModule } from '../shared/shared.module';
+import { MdDatepickerModule, MdNativeDateModule } from '@angular/material';
 
 import { RoomProfileComponent } from '../room-profile/room-profile.component';
 import { RoomHeaderComponent } from './room-header/room-header.component';
@@ -24,7 +24,9 @@ import { RoomCommentsComponent } from './room-comments/room-comments.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    MdDatepickerModule,
+    MdNativeDateModule
   ]
 })
 export class RoomProfileModule {
