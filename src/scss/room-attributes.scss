@@ -122,3 +122,16 @@
     }
   }
 }
+
+.mat-checkbox-inner-container-no-side-margin {
+    margin-left: 20px !important;
+    margin-top: 9px !important;
+}
+
+.mat-checkbox {
+    pointer-events: none !important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: $mainblue !important;
+}
