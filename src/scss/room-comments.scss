@@ -3,11 +3,81 @@
 
   .comments_container {
     width: 750px;
-    background-color: red;
     margin: auto;
     margin-top: 50px;
-    height: 400px;
     margin-bottom: 100px;
     color: $mainblack;
+
+    .row {
+      margin: 0;
+      margin-bottom: 25px;
+
+      .userimg {
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .username {
+        position: absolute;
+        color: $mainblack;
+        font-family: Century Gothic;
+        margin-top: -148px;
+        margin-left: 185px;
+        font-size: 20px;
+      }
+
+      .comment {
+        position: absolute;
+        background-color: $mainblack;
+        color: $mainBackground;
+        width: 500px;
+        margin-top: -119px;
+        margin-left: 185px;
+        padding: 18px;
+        border-radius: 7px;
+        letter-spacing: 0.3px;
+        font-size: 14px;
+      }
+
+      .commenttime {
+        position: absolute;
+        color: $mainblack;
+        margin-top: -145px;
+        margin-left: 509px;
+        font-size: 14px;
+      }
+
+      .arrow {
+        position: absolute;
+        color: $mainblack;
+        font-size: 36px;
+        margin-top: -115px;
+        margin-left: 155px;
+      }
+
+      .icon {
+        position: absolute;
+        margin-left: 532px;
+        font-size: 19px;
+        margin-top: 46px;
+        color: #FF2500;
+        cursor: not-allowed;
+      }
+
+      .realfriend {
+        position: absolute;
+        font-family: $mainFontFamily;
+        text-transform: uppercase;
+        background-color: #FFFD01;
+        padding: 7px;
+        font-size: 18px;
+        margin-top: -34px;
+        margin-left: 26px;
+        border-radius: 5px;
+      }
+    }
   }
 }
