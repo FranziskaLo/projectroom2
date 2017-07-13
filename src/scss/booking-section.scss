@@ -6,7 +6,7 @@
     height: 305px;
     margin: auto;
 
-    .title {
+    .content_title {
       float: left;
       background-color: $mainBackground;
       color: $mainblue;
@@ -103,4 +103,14 @@
       font-size: 40px;
     }
   }
+}
+
+.picker-box {
+  font-family: Arial !important;
+}
+
+.picker-control.footer[_ngcontent-c3] .action-confirm[_ngcontent-c3]::before {
+    width: 0.6em !important;
+    height: 0.6em !important;
+    background-color: $mainBackground !important;
 }

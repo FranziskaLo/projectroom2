@@ -1,7 +1,7 @@
 <div class="row booking">
   <div class="col-xs-12">
     <div class="content">
-      <div class="title">Buchen</div>
+      <div class="content_title">Buchen</div>
       <div class="pricebox">
         <div class="pricebox_inner">
           <div class="price_font">Preis</div>
@@ -19,7 +19,92 @@
         <div class="booking_font" style="margin-top: -34px; margin-left: 505px;">Personen</div>
         <input type="number" class="dateinput" style="width: 90px; margin-left: 114px;" />
       </div>
-      <button class="btn button_style" type="submit">Sofort buchen</button>
+      <button (click)="openModal('directbooking')" class="btn button_style" type="submit">Sofort buchen</button>
     </div>
   </div>
 </div>
+
+<!-- Sichtbar, sobald man auf Registrieren oder Anmelden klickt -->
+<app-modal id="directbooking" class="modal-directbooking">
+  <div class="modal">
+    <div class="modal-body">
+      <div class="content_title">Sofort buchen</div>
+      <div class="pricebox">
+        <div class="price">5,25</div>
+        <div class="eurperh">€ / Stunde</div>
+      </div>
+      <div class="data">
+        <div class="booking_font" style="margin-top: 11px; margin-left: -41px;">von</div>
+        <input class="picker-input dateinput" [ngModel]="moment | date: 'short'" [(dateTimePicker)]="moment" [theme]="'#29C1B5'"
+          [mode]="'dropdown'" [minMoment]="'2017-07-13 19:30:40'" readonly>
+        <div class="booking_font" style="    margin-top: -34px; margin-left: 236px;">bis</div>
+        <input class="picker-input dateinput" [ngModel]="moment | date: 'short'" [(dateTimePicker)]="moment" [theme]="'#29C1B5'"
+          [mode]="'dropdown'" [minMoment]="'2017-07-13 19:30:40'" style="margin-left: 58px;" readonly>
+        <div class="booking_font" style="margin-top: -34px; margin-left: 505px;">Personen</div>
+        <input type="number" class="dateinput" style="width: 90px; margin-left: 114px;" />
+      </div>
+      <div class="booking-details">
+        <div class="row detail_title">Bankverbindung</div>
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-sm-2">Kontoinhalber</div>
+          <div class="col-sm-10"><input class="name" type="text" /></div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+          <div class="col-sm-2">IBAN</div>
+          <div class="col-sm-10"><input class="iban" type="text" /></div>
+        </div>
+        <div class="row detail_title" style="margin-top: 15px;">Rechnungsadresse</div>
+        <div class="row">
+          <div class="row" style="margin-top: 10px;">
+            <div class="col-sm-6">
+              <div class="col-sm-3">Vorname</div>
+              <div class="col-sm-9"><input class="address" type="text" /></div>
+            </div>
+            <div class="col-sm-6">
+              <div class="col-sm-3">Nachname</div>
+              <div class="col-sm-9"><input class="address" type="text" /></div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 15px;">
+            <div class="col-sm-2" style="padding-right: 41px;">Land</div>
+            <div class="col-sm-10"><input class="iban" type="text" style="margin-left: -29px; width: 264px;" /></div>
+          </div>
+          <div class="row" style="margin-top: 15px;">
+            <div class="col-sm-6">
+              <div class="col-sm-3">Postleitzahl</div>
+              <div class="col-sm-9"><input class="address" type="text" /></div>
+            </div>
+            <div class="col-sm-6">
+              <div class="col-sm-3">Stadt</div>
+              <div class="col-sm-9"><input class="address" type="text" /></div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 15px; margin-bottom: 10px;">
+            <div class="col-sm-6">
+              <div class="col-sm-3">Straße</div>
+              <div class="col-sm-9"><input class="address" type="text" /></div>
+            </div>
+            <div class="col-sm-6">
+              <div class="col-sm-3">Hausnr.</div>
+              <div class="col-sm-9"><input class="address" type="text" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row info">
+        <div class="col-sm-3">
+          <md-checkbox class="mycheckbox" [(ngModel)]="disableButton1"></md-checkbox>
+        </div>
+        <div class="col-sm-9 infotext">Mit dem Klick auf "sofort verbindlich buchen" bestätige ich die AGB, Nutzerrichtlinien und Hinweise zur Miete und
+          Vermietung von Räumen gelesen zu haben und akzeptiere diese. Ich bin informiert, dass ich mit dem Klick auf "sofort
+          verbindlich buchen" eine entsprechend verbindliche Zusage erteile. Für die Stornierung einer solchen Buchung fallen
+          Gebühren an, die ich zahlen muss. Ebenso bin ich mir bewusst, dass dies negative Auswirkungen auf meine Bewertung
+          auf dieser Plattform hat.</div>
+      </div>
+
+      <button class="btn button_style" type="submit" [disabled]="!disableButton1">Sofort verbindlich buchen</button>
+
+    </div>
+  </div>
+  <div class="modal-background"></div>
+</app-modal>
