@@ -3,7 +3,7 @@
 
   .content {
     width: 750px;
-    height: 400px;
+    height: 305px;
     margin: auto;
 
     .title {
@@ -63,14 +63,33 @@
     }
 
     .data {
-      // background-color: $mainblack;
-      background-color: transparent;
+      background-color: $mainblack;
       color: $mainblack;
-      height: 187px;
+      height: 95px;
       margin-bottom: 10px;
+      padding-top: 23px;
+      padding-left: 50px;
 
       button {
         color: $mainblue;
+      }
+
+      .booking_font {
+        color: $mainBackground;
+        font-family: $mainFontFamily;
+        text-transform: uppercase;
+        position: absolute;
+        font-size: 30px;
+      }
+
+      .dateinput {
+        width: 210px;
+        height: 45px;
+        font-size: 18px;
+        text-align: right;
+        padding-right: 8px;
+        color: $mainblack;
+        padding-top: 3px;
       }
     }
 
