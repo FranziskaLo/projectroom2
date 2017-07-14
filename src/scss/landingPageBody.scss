@@ -66,16 +66,6 @@
   }
 }
 
-.signs {
-  height: 500px;
-  background-color: $mainBackground;
-  padding: 0;
-
-  &.row {
-    margin: 0;
-  }
-}
-
 .imageDetails {
   width: 480px;
   height: 290px;
@@ -178,10 +168,6 @@
     margin-left: 300px;
     font-size: 20px;
   }
-}
-
-.comments {
-  background-color: $mainBackground;
 }
 
 .forgotpw {

@@ -11,7 +11,6 @@ import { RecommendedRoomsComponent } from './landingpage-diashow/recommended-roo
 import { NewRoomsComponent } from './landingpage-diashow/new-rooms/new-rooms.component';
 import { RandomRoomsComponent } from './landingpage-diashow/random-rooms/random-rooms.component';
 import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
-import { FounderSectionComponent } from './founder-section/founder-section.component';
 import { MemberCommentsComponent } from './member-comments/member-comments.component';
 import { RoomRotateComponent } from '../shared/services/rooms/room-rotate/room-rotate.component';
 
@@ -27,7 +26,6 @@ import { RoomRotateComponent } from '../shared/services/rooms/room-rotate/room-r
     NewRoomsComponent,
     RandomRoomsComponent,
     WelcomeMessageComponent,
-    FounderSectionComponent,
     MemberCommentsComponent,
     RoomRotateComponent
   ],

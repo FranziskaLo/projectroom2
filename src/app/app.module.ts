@@ -29,6 +29,7 @@ import { GLOBALCONFIGService } from './shared/services/global_config/GLOBALCONFI
 import { RoomBackendService } from './shared/services/rooms/room-backend/roomBackend.service';
 import { ResthelperService } from './shared/services/global_config/resthelper.service';
 import { ModalService } from './shared/services/modal/modal.service';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ModalService } from './shared/services/modal/modal.service';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
+    SearchComponent,
   ],
   imports: [
     HomeModule,
