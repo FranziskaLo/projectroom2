@@ -52,6 +52,8 @@ body.modal-open {
 .modal-register {
   .modal {
     margin-top: 120px;
+    overflow: auto;
+    max-height: 555px;
 
      .modal-body {
       width: 560px;

@@ -31,6 +31,8 @@
     "jquery": "^3.2.1",
     "moment": "^2.18.1",
     "ng-pick-datetime": "^4.2.2",
+    "pg": "^6.4.1",
+    "postcss-loader": "^2.0.6",
     "rxjs": "^5.1.0",
     "sass": "^0.5.0",
     "scss": "^0.2.4",
