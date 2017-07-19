@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { AuthService } from '../../shared/services/authentication/auth.service';
-import { AlertService } from '../../shared/services/authentication/alert.service';
-import { ModalService } from '../../shared/services/modal/modal.service';
+import { ModalService } from '../services/modal/modal.service';
 
 @Component({
-  moduleId: module.id.toString(),
-  selector: 'app-welcome-message',
-  templateUrl: './welcome-message.component.html'
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styles: []
 })
-export class WelcomeMessageComponent implements OnInit {
+export class AuthComponent implements OnInit {
 
-  constructor(private authService: AuthService, private modalService: ModalService, private alertService: AlertService) { }
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
-
   }
 
   // Öffnen des Pop-ups
@@ -40,23 +37,16 @@ export class WelcomeMessageComponent implements OnInit {
     //   links[i].className = links[i].className.replace(' tabblue', '');
     // }
     document.getElementById(sign_tab).style.display = 'block';
-    // evt.currentTarget.className += ' tabblue';
+    // event.target.className += ' tabblue';
   }
 
-  // Einloggen
-  onLogin(form: NgForm) {
-
-  }
-
-  // Registrieren
   onSignup(form: NgForm) {
-
+    // const firstName = form.value.firstName;
+    // const lastName = form.value.lastName;
+    // const bday = form.value.bday;
+    const email = form.value.email;
+    const password = form.value.password;
+    // const confirm_password = form.value.confirm_password;
   }
-
-  // Confirm password
-  validatePassword() {
-
-  }
-
 
 }
