@@ -12,7 +12,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './shared/services/rooms/room-backend/in-memory-data.service';
 import { RoomService } from './shared/services/rooms/room-backend/room.service';
 
-import { AuthService } from './shared/services/authentication/auth.service';
+import { AuthService } from './shared/auth/auth.service';
 import { AlertService } from './shared/services/authentication/alert.service';
 
 import { BaseRequestOptions, Http } from '@angular/http';

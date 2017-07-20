@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { AuthService } from '../../shared/services/authentication/auth.service';
+import { AuthService } from '../../shared/auth/auth.service';
 import { AlertService } from '../../shared/services/authentication/alert.service';
 import { ModalService } from '../../shared/services/modal/modal.service';
 
