@@ -6,8 +6,7 @@ import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styles: []
+  templateUrl: './auth.component.html'
 })
 export class AuthComponent implements OnInit {
 
@@ -45,10 +44,10 @@ export class AuthComponent implements OnInit {
     // const firstName = form.value.firstName;
     // const lastName = form.value.lastName;
     // const bday = form.value.bday;
-    const email = form.value.email;
-    const password = form.value.password;
+    const signin_email = form.value.signin_email;
+    const signin_password = form.value.signin_password;
     // const confirm_password = form.value.confirm_password;
-    this.authService.signupUser(email, password);
+    this.authService.signupUser(signin_email, signin_password);
   }
 
 }

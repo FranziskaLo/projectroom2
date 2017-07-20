@@ -10,12 +10,12 @@
       <div id="anmelden" class="tabcontent" style="display: none;">
         <form name="loginForm" (ngSubmit)="onLogin()">
           <div class="form-group">
-            <label for="email">E-Mail Adresse</label>
-            <input type="email" class="form-control" id="email" name="email" ngModel />
+            <label for="login_email">E-Mail Adresse</label>
+            <input type="email" class="form-control" id="login_email" name="login_email" ngModel required email />
           </div>
           <div class="form-group">
             <label for="login_password">Passwort</label>
-            <input type="password" class="form-control" id="login_password" name="login_password" ngModel />
+            <input type="password" class="form-control" id="login_password" name="login_password" ngModel required />
             <div class="forgotpw">passwort vergessen?</div>
           </div>
           <button class="btn button_style" type="submit">Anmelden</button>
@@ -24,32 +24,35 @@
 
       <div id="registrieren" class="tabcontent" style="display: block;">
         <!-- <form (ngSubmit)="onSignup()"> -->
-        <form (ngSubmit)="onSignup(f)" #f="ngForm">
-          <div class="form-group">
+        <form (ngSubmit)="onSignup(f2)" #f2="ngForm">
+          <!-- <div class="form-group">
             <label for="firstName">Vorname</label>
-            <input type="text" id="firstName" name="firstName" ngModel class="form-control">
+            <input type="text" id="firstName" name="firstName" ngModel class="form-control" />
           </div>
           <div class="form-group">
             <label for="lastName">Nachname</label>
-            <input type="text" id="lastName" name="lastName" ngModel class="form-control">
+            <input type="text" id="lastName" name="lastName" ngModel class="form-control" />
           </div>
           <div class="form-group">
             <label for="bday">Geburtsdatum</label>
-            <input type="date" id="bday" name="bday" ngModel class="form-control" style="width: 160px;">
+            <input type="date" id="bday" name="bday" ngModel class="form-control" style="width: 160px;" />
+          </div> -->
+          <div class="form-group">
+            <label for="signin_email">E-Mail Adresse</label>
+            <input type="email" id="signin_email" name="signin_email" ngModel class="form-control" required email #se="ngModel" />
+            <span class="help-block" *ngIf="!se.valid && se.touched">Please enter a valid email!</span>
           </div>
           <div class="form-group">
-            <label for="email">E-Mail Adresse</label>
-            <input type="email" id="email" name="email" ngModel class="form-control">
+            <label for="signin_password">Passwort</label>
+            <input type="password" minlength="6" id="signin_password" name="signin_password" ngModel class="form-control" required #sp="ngModel"
+            />
+            <span class="help-block" *ngIf="!sp.valid && sp.touched">Please enter a password with at least 6 characters!</span>
           </div>
-          <div class="form-group">
-            <label for="password">Passwort</label>
-            <input type="password" id="password" name="password" ngModel class="form-control">
-          </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="confirm_password">Passwort wiederholen</label>
-            <input type="password" id="confirm_password" name="confirm_password" ngModel class="form-control">
-          </div>
-          <button class="btn button_style" type="submit">Registrieren</button>
+            <input type="password" id="confirm_password" name="confirm_password" ngModel class="form-control" />
+          </div> -->
+          <button [disabled]="!f2.valid" class="btn button_style" type="submit">Registrieren</button>
         </form>
       </div>
       <!-- <button (click)="closeModal( 'register'); ">Close</button> -->

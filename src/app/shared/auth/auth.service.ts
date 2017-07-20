@@ -9,8 +9,8 @@ export class AuthService {
   }
 
   // Registrierungsfunktion
-  signupUser(email: string, password: string) {
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+  signupUser(signin_email: string, signin_password: string) {
+    firebase.auth().createUserWithEmailAndPassword(signin_email, signin_password)
       .catch(
       error => console.log(error)
       );
