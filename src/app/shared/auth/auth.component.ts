@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { ModalService } from '../services/modal/modal.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -10,7 +11,7 @@ import { ModalService } from '../services/modal/modal.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService, private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -47,6 +48,7 @@ export class AuthComponent implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     // const confirm_password = form.value.confirm_password;
+    this.authService.signupUser(email, password);
   }
 
 }
