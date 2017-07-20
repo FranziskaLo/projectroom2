@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { ModalService } from '../services/modal/modal.service';
@@ -9,6 +9,8 @@ import { AuthService } from './auth.service';
   templateUrl: './auth.component.html'
 })
 export class AuthComponent implements OnInit {
+  @ViewChild('f2') signupForm: NgForm;
+  @ViewChild('f1') loginForm: NgForm;
 
   constructor(private modalService: ModalService, private authService: AuthService) { }
 
@@ -40,6 +42,8 @@ export class AuthComponent implements OnInit {
     // event.target.className += ' tabblue';
   }
 
+
+  // Registrierungsfunktion verbunden mit AuthService
   onSignup(form: NgForm) {
     // const firstName = form.value.firstName;
     // const lastName = form.value.lastName;
@@ -48,6 +52,15 @@ export class AuthComponent implements OnInit {
     const signin_password = form.value.signin_password;
     // const confirm_password = form.value.confirm_password;
     this.authService.signupUser(signin_email, signin_password);
+    this.signupForm.reset();
+  }
+
+  // Login Funktion verbunden mit AuthService
+  onLogin(form: NgForm) {
+    const login_email = form.value.login_email;
+    const login_password = form.value.login_password;
+    this.authService.loginUser(login_email, login_password);
+    this.loginForm.reset();
   }
 
 }

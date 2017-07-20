@@ -17,8 +17,14 @@ export class AuthService {
   }
 
   // Login Funktion
-  login(email: string, password: string) {
-
+  loginUser(login_email: string, login_password: string) {
+    firebase.auth().signInWithEmailAndPassword(login_email, login_password)
+      .then(
+      response => console.log(response)
+      )
+      .catch(
+      error => console.log(error)
+      );
   }
 
   // Logout Funktion

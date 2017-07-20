@@ -8,7 +8,7 @@
       </div>
 
       <div id="anmelden" class="tabcontent" style="display: none;">
-        <form name="loginForm" (ngSubmit)="onLogin()">
+        <form name="loginForm" (ngSubmit)="onLogin(f1)" #f1="ngForm">
           <div class="form-group">
             <label for="login_email">E-Mail Adresse</label>
             <input type="email" class="form-control" id="login_email" name="login_email" ngModel required email />
@@ -23,7 +23,6 @@
       </div>
 
       <div id="registrieren" class="tabcontent" style="display: block;">
-        <!-- <form (ngSubmit)="onSignup()"> -->
         <form (ngSubmit)="onSignup(f2)" #f2="ngForm">
           <!-- <div class="form-group">
             <label for="firstName">Vorname</label>
