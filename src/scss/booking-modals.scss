@@ -1,0 +1,197 @@
+.modal-directbooking {
+  .modal {
+    margin-top: 38px;
+
+     .modal-body {
+      width: 750px;
+      height: 700px;
+      overflow: auto;
+      background-color: $mainBackground;
+      margin: auto !important;
+
+        .content_title {
+        color: $mainblack;
+        font-family: $mainFontFamily;
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: 330px;
+        height: 67px;
+        margin-left: 6px;
+      }
+
+    .pricebox {
+      height: 53px;
+      width: 329px;
+      margin-left: 380px;
+      margin-top: -61px;
+      position: absolute;
+
+        .price {
+          width: 195px;
+          background-color: #29C1B5;
+          color: $mainBackground;
+          text-align: right;
+          height: 53px;
+          margin-left: 14px;
+          font-size: 39px;
+          padding-right: 10px;
+        }
+
+        .eurperh {
+          position: absolute;
+          margin-left: 230px;
+          margin-top: -45px;
+          text-transform: uppercase;
+          font-family: $mainFontFamily;
+          font-size: 30px;
+        }
+
+      }
+
+      .data {
+      background-color: $mainblack;
+      color: $mainblack;
+      height: 95px;
+      width: 745px;
+      padding-top: 23px;
+      padding-left: 50px;
+      margin-left: -12px;
+      margin-top: 14px;
+
+      button {
+        color: $mainblue;
+      }
+
+      .booking_font {
+        color: $mainBackground;
+        font-family: $mainFontFamily;
+        text-transform: uppercase;
+        position: absolute;
+        font-size: 30px;
+      }
+
+      .dateinput {
+        width: 210px;
+        height: 45px;
+        font-size: 18px;
+        text-align: right;
+        padding-right: 8px;
+        color: $mainblack;
+        padding-top: 3px;
+      }
+    }
+
+    .booking-details {
+      background-color: $mainblack;
+      width: 730px;
+      color: $mainBackground;
+      font-family: $mainFontFamily;
+      margin-top: 15px;
+      margin-left: -2px;
+      padding: 7px 13px;
+      border-radius: 5px;
+
+      .row {
+        margin: 0;
+
+
+        &.detail_title {
+          color: $mainblue;
+          font-size: 30px;
+        }
+
+        .col-sm-2 {
+         padding: 0;
+         font-size: 20px;
+         text-align: right;
+         padding-right: 11px;
+         padding-top: 3px;
+        }
+
+        .col-sm-10 {
+          padding: 0;
+
+          .name {
+            font-family: Arial;
+            font-size: 20px;
+            background-color: #383838;
+            border-radius: 3px;
+            border: none;
+            padding: 3px 8px;
+            width: 587px;
+          }
+
+          .iban {
+            font-family: Arial;
+            font-size: 20px;
+            background-color: #383838;
+            border-radius: 3px;
+            border: none;
+            padding: 3px 8px;
+            width: 296px;
+          }
+        }
+
+        .col-sm-6 {
+          padding: 0;
+
+          .col-sm-3 {
+            padding: 0;
+            font-size: 20px;
+            text-align: right;
+            padding-right: 11px;
+            padding-top: 4px;
+          }
+
+          .col-sm-9 {
+            padding: 0;
+
+            .address {
+            font-family: Arial;
+            font-size: 20px;
+            background-color: #383838;
+            border-radius: 3px;
+            border: none;
+            padding: 3px 8px;
+            width: 264px;
+          }
+          }
+        }
+      }
+    }
+    .info {
+      margin: 0;
+
+      .mycheckbox {
+        margin-left: 34px;
+        margin-top: 60px;
+        pointer-events: auto !important;
+        position: absolute;
+
+        .mat-checkbox-inner-container {
+        height: 50px !important;
+        width: 50px !important;
+        }
+      }
+
+      .infotext {
+        padding: 24px;
+        text-align: justify;
+        font-family: Arial;
+        font-size: 14px;
+      }
+    }
+
+    .button_style {
+      width: 100%;
+      height: 70px;
+      background-color: $mainblue;
+      text-transform: uppercase;
+      color: $mainBackground;
+      font-family: $mainFontFamily;
+      font-size: 40px;
+    }
+   }
+  }
+}

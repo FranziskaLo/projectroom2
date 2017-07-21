@@ -1,0 +1,66 @@
+.modal-register {
+  .modal {
+    margin-top: 120px;
+    overflow: auto;
+    max-height: 555px;
+
+     .modal-body {
+      width: 560px;
+      background-color: $mainBackground;
+      margin: auto !important;
+
+       .tab {
+        overflow: hidden;
+
+          button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 44px;
+            text-transform: uppercase;
+            font-family: $mainFontFamily;
+            text-decoration: underline;
+
+             &:focus {
+              color: $mainblue;
+            }
+
+            &:active {
+              color: $mainblue;
+            }
+
+            &:hover {
+              color: $mainblue;
+            }
+        }
+      }
+
+      .tabcontent {
+        display: none;
+        border-top: none;
+
+        form {
+          margin-top: 20px;
+
+          .button_style {
+            width: 100%;
+            margin-top: 35px;
+            height: 70px;
+            background-color: $mainblue;
+            text-transform: uppercase;
+            color: $mainBackground;
+            font-family: $mainFontFamily;
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .tabblue {
+//   color: $mainblue !important;
+// }

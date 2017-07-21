@@ -19,12 +19,13 @@
         <div class="booking_font" style="margin-top: -34px; margin-left: 505px;">Personen</div>
         <input type="number" class="dateinput" style="width: 90px; margin-left: 114px;" />
       </div>
-      <button [disabled]="!authService.isAuthenticated()" (click)="openModal('directbooking')" class="btn button_style" type="submit">Sofort buchen</button>
+      <button *ngIf="!authService.isAuthenticated()" (click)="openModal('userhint')" class="btn button_style" type="submit">Sofort buchen</button>
+      <button *ngIf="authService.isAuthenticated()" (click)="openModal('directbooking')" class="btn button_style" type="submit">Sofort buchen</button>
     </div>
   </div>
 </div>
 
-<!-- Sichtbar, sobald man auf sofort buchen klickt -->
+<!-- Sichtbar, sobald man auf sofort buchen klickt (eingeloggt) -->
 <app-modal id="directbooking" class="modal-directbooking">
   <div class="modal">
     <div class="modal-body">
@@ -103,6 +104,18 @@
       </div>
 
       <button class="btn button_style" type="submit" [disabled]="!disableButton1">Sofort verbindlich buchen</button>
+
+    </div>
+  </div>
+  <div class="modal-background"></div>
+</app-modal>
+
+<!-- Sichtbar, sobald man auf sofort buchen klickt (ausgeloggt) -->
+<app-modal id="userhint" class="modal-userhint">
+  <div class="modal">
+    <div class="modal-body">
+
+      Test
 
     </div>
   </div>
