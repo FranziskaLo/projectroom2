@@ -114,9 +114,11 @@
 <app-modal id="userhint" class="modal-userhint">
   <div class="modal">
     <div class="modal-body">
-
-      Test
-
+      <div class="hint-title">Bitte einloggen!</div>
+      <div class="hint-text1">Das Buchen von Räumen ist nur eingeloggten Nutzern möglich.</div>
+      <div class="hint-text2">Nicht eingeloggt oder noch kein Nutzerkonto bei uns?<br />Werde ein Teil unserer Community und erstelle Dir jetzt ein
+        Konto oder melde Dich an zum Mieten oder Vermieten von freistehenden Räumen!<br /><br />Wir freuen uns auf Dich!</div>
+      <button class="btn button_style" (click)="closeModal( 'userhint');">Fenster schließen</button>
     </div>
   </div>
   <div class="modal-background"></div>

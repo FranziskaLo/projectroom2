@@ -195,3 +195,48 @@
    }
   }
 }
+
+.modal-userhint {
+  .modal {
+    margin-top: 170px;
+
+     .modal-body {
+        width: 600px;
+        height: 420px;
+        overflow: auto;
+        background-color: $mainBackground;
+        margin: auto !important;
+
+        .hint-title {
+          color: $mainblue;
+          font-family: $mainFontFamily;
+          font-size: 80px;
+          text-transform: uppercase;
+        }
+
+        .hint-text1 {
+          color: $mainblack;
+          margin-top: -8px;
+          font-size: 21px;
+        }
+
+        .hint-text2 {
+          color: $mainblack;
+          margin-top: 25px;
+          font-size: 14px;
+          font-family: sans-serif;
+        }
+
+        .button_style {
+          width: 100%;
+          margin-top: 35px;
+          height: 70px;
+          background-color: $mainblue;
+          text-transform: uppercase;
+          color: $mainBackground;
+          font-family: $mainFontFamily;
+          font-size: 40px;
+        }
+     }
+  }
+}
