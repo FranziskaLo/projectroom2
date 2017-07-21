@@ -1,6 +1,8 @@
-<!--<div class="row rooms exeption">
-  <div class="col-xs-12">
-    <h1>R&Auml;UME VON ECHTEN FREUNDEN... hier noch nicht</h1>
+<ng-template [ngIf]="authService.isAuthenticated()">
+  <div class="row rooms exeption">
+    <div class="col-xs-12">
+      <h1>R&Auml;UME VON ECHTEN FREUNDEN</h1>
+    </div>
   </div>
-</div>
-<app-room-rotate></app-room-rotate>-->
+  <app-room-rotate></app-room-rotate>
+</ng-template>

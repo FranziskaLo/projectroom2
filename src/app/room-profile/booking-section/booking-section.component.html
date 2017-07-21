@@ -19,7 +19,7 @@
         <div class="booking_font" style="margin-top: -34px; margin-left: 505px;">Personen</div>
         <input type="number" class="dateinput" style="width: 90px; margin-left: 114px;" />
       </div>
-      <button (click)="openModal('directbooking')" class="btn button_style" type="submit">Sofort buchen</button>
+      <button [disabled]="!authService.isAuthenticated()" (click)="openModal('directbooking')" class="btn button_style" type="submit">Sofort buchen</button>
     </div>
   </div>
 </div>

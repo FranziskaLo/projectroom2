@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ModalService } from '../shared/services/modal/modal.service';
+import { AuthService } from '../shared/auth/auth.service';
 
 @Component({
   moduleId: module.id.toString(),
@@ -9,7 +10,7 @@ import { ModalService } from '../shared/services/modal/modal.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService, private authService: AuthService) { }
 
   ngOnInit() {
   }
