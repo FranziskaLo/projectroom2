@@ -48,11 +48,12 @@
         <div class="row detail_title">Bankverbindung</div>
         <div class="row" style="margin-top: 10px;">
           <div class="col-sm-2">Kontoinhalber</div>
-          <div class="col-sm-10"><input class="name" type="text" /></div>
+          <div class="col-sm-10"><input ngModel class="name" type="text" required #ko="ngModel" /></div>
         </div>
         <div class="row" style="margin-top: 15px;">
           <div class="col-sm-2">IBAN</div>
-          <div class="col-sm-10"><input class="iban" type="text" /></div>
+          <div class="col-sm-10"><input pattern="^DE\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{2}|DE\d{20}$" ngModel class="iban" type="text" required
+              #ib="ngModel" /><span class="ibanhint" *ngIf="!ib.valid && ib.touched">&nbsp;Please enter a valid IBAN.</span></div>
         </div>
         <div class="row detail_title" style="margin-top: 15px;">Rechnungsadresse</div>
         <div class="row">
@@ -73,7 +74,7 @@
           <div class="row" style="margin-top: 15px;">
             <div class="col-sm-6">
               <div class="col-sm-3">Postleitzahl</div>
-              <div class="col-sm-9"><input class="address" type="text" /></div>
+              <div class="col-sm-9"><input class="address" maxlength="6" type="text" /></div>
             </div>
             <div class="col-sm-6">
               <div class="col-sm-3">Stadt</div>
@@ -103,7 +104,7 @@
           auf dieser Plattform hat.</div>
       </div>
 
-      <button class="btn button_style" type="submit" [disabled]="!disableButton1">Sofort verbindlich buchen</button>
+      <button class="btn button_style" type="submit" [disabled]="!disableButton1 && !ib.valid && !ko.valid">Sofort verbindlich buchen</button>
 
     </div>
   </div>
