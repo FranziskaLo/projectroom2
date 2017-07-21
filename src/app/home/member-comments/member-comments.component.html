@@ -15,8 +15,8 @@
         </div>
         <div class="commenttime">kommentiert am 16.07.2017</div>
         <div class="arrow">◄</div>
-        <i class="fa fa-trash-o icon" aria-hidden="true"></i>
-        <div class="realfriend">Ein echter Freund!</div>
+        <i *ngIf="authService.isAuthenticated()" class="fa fa-trash-o icon" aria-hidden="true"></i>
+        <div *ngIf="authService.isAuthenticated()" class="realfriend">Ein echter Freund!</div>
       </div>
       <div class="row">
         <img src="https://68.media.tumblr.com/aaa5efc7cd6f4d563019e7b85a44f57b/tumblr_o4jmbePal71twygmto1_500.jpg" class="userimg"
@@ -26,7 +26,7 @@
         </div>
         <div class="commenttime">kommentiert am 16.07.2017</div>
         <div class="arrow">◄</div>
-        <i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+        <i *ngIf="authService.isAuthenticated()" class="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
       </div>
     </div>
   </div>
