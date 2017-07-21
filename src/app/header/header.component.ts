@@ -40,5 +40,10 @@ export class HeaderComponent implements OnInit {
     // event.target.className += ' tabblue';
   }
 
+  // Logout Funktion
+  onLogout() {
+    this.authService.logout();
+  }
+
 
 }

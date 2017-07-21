@@ -33,6 +33,12 @@ export class AuthService {
       );
   }
 
+  // Logout Funktion
+  logout() {
+    firebase.auth().signOut();
+    this.token = null;
+  }
+
   // JSON Web Token bekommen um in requests an den Server einen Token mitschicken zu können
   getToken() {
     firebase.auth().currentUser.getToken()
