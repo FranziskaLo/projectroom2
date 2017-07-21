@@ -52,7 +52,7 @@
         </div>
         <div class="row" style="margin-top: 15px;">
           <div class="col-sm-2">IBAN</div>
-          <div class="col-sm-10"><input pattern="^DE\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{2}|DE\d{20}$" ngModel class="iban" type="text" required
+          <div class="col-sm-10"><input ngModel pattern="^DE\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{2}|DE\d{20}$" class="iban" type="text" required
               #ib="ngModel" /><span class="ibanhint" *ngIf="!ib.valid && ib.touched">&nbsp;Please enter a valid IBAN.</span></div>
         </div>
         <div class="row detail_title" style="margin-top: 15px;">Rechnungsadresse</div>
@@ -60,35 +60,36 @@
           <div class="row" style="margin-top: 10px;">
             <div class="col-sm-6">
               <div class="col-sm-3">Vorname</div>
-              <div class="col-sm-9"><input class="address" type="text" /></div>
+              <div class="col-sm-9"><input ngModel class="address" type="text" required #vo="ngModel" /></div>
             </div>
             <div class="col-sm-6">
               <div class="col-sm-3">Nachname</div>
-              <div class="col-sm-9"><input class="address" type="text" /></div>
+              <div class="col-sm-9"><input ngModel class="address" type="text" required #na="ngModel" /></div>
             </div>
           </div>
           <div class="row" style="margin-top: 15px;">
             <div class="col-sm-2" style="padding-right: 41px;">Land</div>
-            <div class="col-sm-10"><input class="iban" type="text" style="margin-left: -29px; width: 264px;" /></div>
+            <div class="col-sm-10"><input ngModel class="iban" type="text" style="margin-left: -29px; width: 264px;" required #la="ngModel" /></div>
           </div>
           <div class="row" style="margin-top: 15px;">
             <div class="col-sm-6">
               <div class="col-sm-3">Postleitzahl</div>
-              <div class="col-sm-9"><input class="address" maxlength="6" type="text" /></div>
+              <div class="col-sm-9"><input ngModel class="address" pattern="\d{0,9}" minlength="5" maxlength="5" type="text" required #plz="ngModel"
+                /></div>
             </div>
             <div class="col-sm-6">
               <div class="col-sm-3">Stadt</div>
-              <div class="col-sm-9"><input class="address" type="text" /></div>
+              <div class="col-sm-9"><input ngModel class="address" type="text" required #sta="ngModel" /></div>
             </div>
           </div>
           <div class="row" style="margin-top: 15px; margin-bottom: 10px;">
             <div class="col-sm-6">
               <div class="col-sm-3">Straße</div>
-              <div class="col-sm-9"><input class="address" type="text" /></div>
+              <div class="col-sm-9"><input ngModel class="address" type="text" required #str="ngModel" /></div>
             </div>
             <div class="col-sm-6">
               <div class="col-sm-3">Hausnr.</div>
-              <div class="col-sm-9"><input class="address" type="text" /></div>
+              <div class="col-sm-9"><input ngModel class="address" type="text" required #hnr="ngModel" /></div>
             </div>
           </div>
         </div>
@@ -103,9 +104,7 @@
           Gebühren an, die ich zahlen muss. Ebenso bin ich mir bewusst, dass dies negative Auswirkungen auf meine Bewertung
           auf dieser Plattform hat.</div>
       </div>
-
-      <button class="btn button_style" type="submit" [disabled]="!disableButton1 && !ib.valid && !ko.valid">Sofort verbindlich buchen</button>
-
+      <button class="btn button_style" type="submit" [disabled]="!disableButton1 || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid">Sofort verbindlich buchen</button>
     </div>
   </div>
   <div class="modal-background"></div>
