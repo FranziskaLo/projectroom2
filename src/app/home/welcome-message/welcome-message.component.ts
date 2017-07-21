@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { AuthService } from '../../shared/auth/auth.service';
-import { AlertService } from '../../shared/services/authentication/alert.service';
 import { ModalService } from '../../shared/services/modal/modal.service';
 
 @Component({
@@ -12,7 +11,7 @@ import { ModalService } from '../../shared/services/modal/modal.service';
 })
 export class WelcomeMessageComponent implements OnInit {
 
-  constructor(private authService: AuthService, private modalService: ModalService, private alertService: AlertService) { }
+  constructor(private authService: AuthService, private modalService: ModalService) { }
 
   ngOnInit() {
 

@@ -1,0 +1,26 @@
+.pnf_img {
+    width: 85%;
+    margin-top: 55px;
+    margin-left: 7.5%;
+}
+
+.pnf_textbox {
+  width: 100%;
+  margin-top: 55px;
+
+  .pnf_text {
+    font-family: serif;
+    font-weight: bold;
+    font-size: 19px;
+    margin: auto;
+    width: fit-content;
+
+    a {
+      color: $mainblue;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
