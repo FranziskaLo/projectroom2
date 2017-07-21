@@ -24,28 +24,32 @@
 
       <div id="registrieren" class="tabcontent" style="display: block;">
         <form (ngSubmit)="onSignup(f2)" #f2="ngForm">
-          <!-- <div class="form-group">
+          <div class="form-group">
             <label for="firstName">Vorname</label>
-            <input type="text" id="firstName" name="firstName" ngModel class="form-control" />
+            <input type="text" id="firstName" name="firstName" ngModel class="form-control" required #sf="ngModel" />
+            <span *ngIf="!sf.valid && sf.touched">Please enter your first name.</span>
           </div>
           <div class="form-group">
             <label for="lastName">Nachname</label>
-            <input type="text" id="lastName" name="lastName" ngModel class="form-control" />
+            <input type="text" id="lastName" name="lastName" ngModel class="form-control" required #sl="ngModel" />
+            <span *ngIf="!sl.valid && sl.touched">Please enter your last name.</span>
           </div>
           <div class="form-group">
             <label for="bday">Geburtsdatum</label>
-            <input type="date" id="bday" name="bday" ngModel class="form-control" style="width: 160px;" />
-          </div> -->
+            <input type="date" id="bday" name="bday" ngModel class="form-control" style="width: 160px;" max='1999-07-28' required #sb="ngModel"
+            />
+            <span *ngIf="!sb.valid && sb.touched">Please enter your birthday.</span>
+          </div>
           <div class="form-group">
             <label for="signin_email">E-Mail Adresse</label>
             <input type="email" id="signin_email" name="signin_email" ngModel class="form-control" required email #se="ngModel" />
-            <span *ngIf="!se.valid && se.touched">Please enter a valid email!</span>
+            <span *ngIf="!se.valid && se.touched">Please enter a valid email.</span>
           </div>
           <div class="form-group">
             <label for="signin_password">Passwort</label>
             <input type="password" minlength="6" id="signin_password" name="signin_password" ngModel class="form-control" required #sp="ngModel"
             />
-            <span *ngIf="!sp.valid && sp.touched">Please enter a password with at least 6 characters!</span>
+            <span *ngIf="!sp.valid && sp.touched">Please enter a password with at least 6 characters.</span>
           </div>
           <!-- <div class="form-group">
             <label for="confirm_password">Passwort wiederholen</label>

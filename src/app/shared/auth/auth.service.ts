@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 
+import { ModalService } from '../services/modal/modal.service';
+
 @Injectable()
 export class AuthService {
   token: string;
 
-  constructor() {
+  constructor(private modalService: ModalService) {
 
   }
 
@@ -22,6 +24,7 @@ export class AuthService {
     firebase.auth().signInWithEmailAndPassword(login_email, login_password)
       .then(
       response => {
+        this.modalService.close('register');
         firebase.auth().currentUser.getToken()
           .then(
           (token: string) => this.token = token
