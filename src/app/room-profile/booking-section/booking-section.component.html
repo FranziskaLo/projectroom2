@@ -102,7 +102,7 @@
           Gebühren an, die ich zahlen muss. Ebenso bin ich mir bewusst, dass dies negative Auswirkungen auf meine Bewertung
           auf dieser Plattform hat.</div>
       </div>
-      <button class="btn button_style" type="submit" [disabled]="!disableButton1 || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid || !d1.valid || !d2.valid">Sofort verbindlich buchen</button>
+      <button class="btn button_style" (click)="closeModal('directbooking');" (click)="openModal('success')" [disabled]="!disableButton1 || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid || !d1.valid || !d2.valid">Sofort verbindlich buchen</button>
     </div>
   </div>
   <div class="modal-background"></div>
@@ -116,7 +116,21 @@
       <div class="hint-text1">Das Buchen von Räumen ist nur eingeloggten Nutzern möglich.</div>
       <div class="hint-text2">Nicht eingeloggt oder noch kein Nutzerkonto bei uns?<br />Werde ein Teil unserer Community und erstelle Dir jetzt ein
         Konto oder melde Dich an zum Mieten oder Vermieten von freistehenden Räumen!<br /><br />Wir freuen uns auf Dich!</div>
-      <button class="btn button_style" (click)="closeModal( 'userhint');">Fenster schließen</button>
+      <button class="btn button_style" (click)="closeModal('userhint');">Fenster schließen</button>
+    </div>
+  </div>
+  <div class="modal-background"></div>
+</app-modal>
+
+<!-- Sichtbar, sobald man auf sofort verbindlich buchen geht, innerhalb des directbooking modals -->
+<app-modal id="success" class="modal-success">
+  <div class="modal">
+    <div class="modal-body">
+      <div class="success-title">Danke!</div>
+      <div class="success-text1">Der Raum wurde erfolgreich gebucht</div>
+      <div class="success-text2">In Kürze erhältst Du von uns eine E-Mail mit der Buchungsbestätigung und Deine Rechnung.<br />Das Geld wird automatisch
+        per Lastschrift von Deinem Konto abgebucht.</div>
+      <button class="btn button_style" (click)="closeModal('success');">Fenster schließen</button>
     </div>
   </div>
   <div class="modal-background"></div>
