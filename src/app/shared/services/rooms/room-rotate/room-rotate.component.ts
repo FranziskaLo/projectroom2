@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { RoomBackendService } from '../room-backend/roomBackend.service';
-
 import { RoomService } from '../room-backend/room.service';
 
 @Component({
@@ -16,7 +14,7 @@ export class RoomRotateComponent implements OnInit {
   roomNext: boolean;
   private rooms: any[] = [];
 
-  constructor(http: Http, private roomBackendService: RoomBackendService, private roomService: RoomService) { }
+  constructor(http: Http, private roomService: RoomService) { }
 
   ngOnInit() {
     this.getRoomsFromAPI();

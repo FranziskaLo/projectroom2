@@ -7,15 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styles: []
 })
 export class RoomHeaderComponent implements OnInit {
-  room: { id: number, name: string, roompic: string };
+  room: { id: number };
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.room = {
-      id: this.route.snapshot.params['id'],
-      name: this.route.snapshot.params['name'],
-      roompic: this.route.snapshot.params['roompic']
+      id: this.route.snapshot.params['id']
     };
   }
 }

@@ -24,9 +24,6 @@ import { FooterComponent } from './footer/footer.component';
 
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
-import { GLOBALCONFIGService } from './shared/services/global_config/GLOBALCONFIG.service';
-import { RoomBackendService } from './shared/services/rooms/room-backend/roomBackend.service';
-import { ResthelperService } from './shared/services/global_config/resthelper.service';
 import { ModalService } from './shared/services/modal/modal.service';
 import { SearchComponent } from './search/search.component';
 
@@ -48,8 +45,7 @@ import { SearchComponent } from './search/search.component';
     RoomProfileModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
-  providers: [GLOBALCONFIGService, ResthelperService, RoomBackendService,
-    MockBackend, BaseRequestOptions, RoomService, AuthService, ModalService,
+  providers: [MockBackend, BaseRequestOptions, RoomService, AuthService, ModalService,
     AlertService],
   bootstrap: [AppComponent]
 })
