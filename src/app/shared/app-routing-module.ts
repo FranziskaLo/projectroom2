@@ -11,7 +11,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'room-profile', component: RoomProfileComponent },
-  { path: 'room-profile/:id/:name', component: OneRoomComponent },
+  { path: 'room-profile/:id/:name/:roompic', component: OneRoomComponent },
   { path: 'search', component: SearchComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' }

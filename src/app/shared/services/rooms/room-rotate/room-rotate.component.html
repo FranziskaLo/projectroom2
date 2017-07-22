@@ -12,8 +12,7 @@
   </div>
   <div class="col-lg-4 text-center roomdetails_bright">
     <div class="roompicture">
-      <!-- <a (click)="onLoadRoom(1)" style="cursor: pointer;"><img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].href }}" /></a> -->
-      <a [routerLink]="['/room-profile', room.id, room.name ]" *ngFor="let room of rooms" style="cursor: pointer;"><img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].href }}" /></a>
+      <a [routerLink]="['/room-profile', room.id, room.name, room.roompic ]" *ngFor="let room of rooms" style="cursor: pointer;"><img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].href }}" /></a>
       <div class="infobox"> </div>
     </div>
     <div class="room_name">{{ rooms[mSelectedRoom].name }}</div>
