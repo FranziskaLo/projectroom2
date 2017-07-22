@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing-module';
+
 import { ModalComponent } from '../shared/services/modal/modal.component';
 import { AuthComponent } from './auth/auth.component';
 
@@ -12,11 +14,13 @@ import { AuthComponent } from './auth/auth.component';
     AuthComponent
   ],
   exports: [
+    AppRoutingModule,
     CommonModule,
     ModalComponent,
     AuthComponent
   ],
   imports: [
+    AppRoutingModule,
     FormsModule,
     BrowserModule
   ]

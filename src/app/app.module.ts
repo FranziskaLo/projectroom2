@@ -22,7 +22,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { AppRoutingModule } from './app-routing-module';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 import { GLOBALCONFIGService } from './shared/services/global_config/GLOBALCONFIG.service';
@@ -45,7 +44,6 @@ import { SearchComponent } from './search/search.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
     SharedModule,
     RoomProfileModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
