@@ -10,14 +10,12 @@
         </div>
       </div>
       <div class="data">
-        <div class="booking_font" style="margin-top: 11px; margin-left: -41px;">von</div>
-        <input class="picker-input dateinput" [ngModel]="moment | date: 'short'" [(dateTimePicker)]="moment" [theme]="'#29C1B5'"
-          [mode]="'dropdown'" [minMoment]="'2017-07-13 19:30:40'" readonly>
-        <div class="booking_font" style="    margin-top: -34px; margin-left: 236px;">bis</div>
-        <input class="picker-input dateinput" [ngModel]="moment2 | date: 'short'" [(dateTimePicker)]="moment2" [theme]="'#29C1B5'"
-          [mode]="'dropdown'" [minMoment]="'2017-07-13 19:30:40'" style="margin-left: 58px;" readonly>
-        <div class="booking_font" style="margin-top: -34px; margin-left: 505px;">Personen</div>
-        <input type="number" class="dateinput" style="width: 90px; margin-left: 114px;" />
+        <div class="booking_font" style="margin-top: 5px; margin-left: -41px;">von</div>
+        <input type="datetime-local" class="datetime" [(ngModel)]="dateinput1" min="2017-07-22T01:00:00">
+        <div class="booking_font" style="margin-top: -42px; margin-left: 236px;">bis</div>
+        <input type="datetime-local" class="datetime" [(ngModel)]="dateinput2" style="margin-left: 71px;" min="2017-07-22T02:00:00">
+        <div class="booking_font" style="margin-top: -42px; margin-left: 505px;">Personen</div>
+        <input type="number" class="numberinput" style="width: 90px; margin-left: 129px;" min="1" />
       </div>
       <button *ngIf="!authService.isAuthenticated()" (click)="openModal('userhint')" class="btn button_style" type="submit">Sofort buchen</button>
       <button *ngIf="authService.isAuthenticated()" (click)="openModal('directbooking')" class="btn button_style" type="submit">Sofort buchen</button>
@@ -35,14 +33,14 @@
         <div class="eurperh">€ / Stunde</div>
       </div>
       <div class="data">
-        <div class="booking_font" style="margin-top: 11px; margin-left: -41px;">von</div>
-        <input class="picker-input dateinput" [ngModel]="moment | date: 'short'" [(dateTimePicker)]="moment" [theme]="'#29C1B5'"
-          [mode]="'dropdown'" [minMoment]="'2017-07-13 19:30:40'" readonly>
-        <div class="booking_font" style="    margin-top: -34px; margin-left: 236px;">bis</div>
-        <input class="picker-input dateinput" [ngModel]="moment2 | date: 'short'" [(dateTimePicker)]="moment2" [theme]="'#29C1B5'"
-          [mode]="'dropdown'" [minMoment]="'2017-07-13 19:30:40'" style="margin-left: 58px;" readonly>
-        <div class="booking_font" style="margin-top: -34px; margin-left: 505px;">Personen</div>
-        <input type="number" class="dateinput" style="width: 90px; margin-left: 114px;" />
+        <div class="booking_font" style="margin-top: 5px; margin-left: -41px;">von</div>
+        <input ngModel type="datetime-local" class="datetime" [(ngModel)]="dateinput1" min="2017-07-22T01:00:00" required #d1="ngModel"
+        />
+        <div class="booking_font" style="margin-top: -42px; margin-left: 236px;">bis</div>
+        <input ngModel type="datetime-local" class="datetime" [(ngModel)]="dateinput2" style="margin-left: 71px;" min="2017-07-22T02:00:00"
+          required #d2="ngModel" />
+        <div class="booking_font" style="margin-top: -42px; margin-left: 505px;">Personen</div>
+        <input type="number" class="numberinput" style="width: 90px; margin-left: 129px;" min="1" />
       </div>
       <div class="booking-details">
         <div class="row detail_title">Bankverbindung</div>
@@ -104,7 +102,7 @@
           Gebühren an, die ich zahlen muss. Ebenso bin ich mir bewusst, dass dies negative Auswirkungen auf meine Bewertung
           auf dieser Plattform hat.</div>
       </div>
-      <button class="btn button_style" type="submit" [disabled]="!disableButton1 || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid">Sofort verbindlich buchen</button>
+      <button class="btn button_style" type="submit" [disabled]="!disableButton1 || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid || !d1.valid || !d2.valid">Sofort verbindlich buchen</button>
     </div>
   </div>
   <div class="modal-background"></div>
