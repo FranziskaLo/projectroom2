@@ -194,6 +194,16 @@
         text-align: justify;
         font-family: Arial;
         font-size: 14px;
+
+        a {
+          color: $mainblue;
+          cursor: pointer;
+          text-decoration: underline;
+
+          &:hover {
+            color: $mainblue;
+          }
+        }
       }
     }
 

@@ -96,11 +96,12 @@
         <div class="col-sm-3">
           <md-checkbox class="mycheckbox" [(ngModel)]="disableButton1"></md-checkbox>
         </div>
-        <div class="col-sm-9 infotext">Mit dem Klick auf "sofort verbindlich buchen" bestätige ich die AGB, Nutzerrichtlinien und Hinweise zur Miete und
-          Vermietung von Räumen gelesen zu haben und akzeptiere diese. Ich bin informiert, dass ich mit dem Klick auf "sofort
-          verbindlich buchen" eine entsprechend verbindliche Zusage erteile. Für die Stornierung einer solchen Buchung fallen
-          Gebühren an, die ich zahlen muss. Ebenso bin ich mir bewusst, dass dies negative Auswirkungen auf meine Bewertung
-          auf dieser Plattform hat.</div>
+        <div class="col-sm-9 infotext">Mit dem Klick auf "sofort verbindlich buchen" bestätige ich die <a href='/not-found'>AGB</a>,
+          <a href='/not-found'>Nutzerrichtlinien</a>und
+          <a href='/not-found'>Hinweise zur Miete und Vermietung von Räumen</a> gelesen zu haben und akzeptiere diese. Ich
+          bin informiert, dass ich mit dem Klick auf "sofort verbindlich buchen" eine entsprechend verbindliche Zusage erteile.
+          Für die Stornierung einer solchen Buchung fallen Gebühren an, die ich zahlen muss. Ebenso bin ich mir bewusst,
+          dass dies negative Auswirkungen auf meine Bewertung auf dieser Plattform hat.</div>
       </div>
       <button class="btn button_style" (click)="closeModal('directbooking');" (click)="openModal('success')" [disabled]="!disableButton1 || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid || !d1.valid || !d2.valid">Sofort verbindlich buchen</button>
     </div>
