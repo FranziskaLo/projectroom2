@@ -3,39 +3,39 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const rooms = [
       {
-        href: 'http://orientalresidence.azureedge.net/images/thumb-meeting-boardroom.jpg',
         id: 1,
-        location: 'Ort 1',
-        name: 'Testraum 1',
-        price: '700,50'
+        name: 'meine Küche mit rotem Fahrrad',
+        href: 'http://orientalresidence.azureedge.net/images/thumb-meeting-boardroom.jpg',
+        location: 'Mannheim',
+        price: '5,25'
       },
       {
-        href: 'https://officesnapshots.com/wp-content/uploads/2015/12/small-meeting.jpg',
         id: 2,
-        location: 'Ort 2',
-        name: 'Testraum 2',
-        price: '8,50'
+        name: 'cooler Raum zum Relaxen',
+        href: 'https://officesnapshots.com/wp-content/uploads/2015/12/small-meeting.jpg',
+        location: 'Hamburg',
+        price: '4,00'
       },
       {
-        href: 'http://www.escalantebnb.com/images/room3med.jpg',
         id: 3,
-        location: 'Ort 3',
-        name: 'Testraum 3',
-        price: '7,00'
+        name: 'Klavier-Raum',
+        href: 'http://www.escalantebnb.com/images/room3med.jpg',
+        location: 'Frankfurt',
+        price: '10,50'
       },
       {
-        href: 'http://kolkatainterior.in/images/living-room-interior/living-room-interior-project.jpg',
         id: 4,
-        location: 'Ort 4',
-        name: 'Testraum 4',
-        price: '8,00'
+        name: 'neu rennovierter Party-Raum',
+        href: 'http://kolkatainterior.in/images/living-room-interior/living-room-interior-project.jpg',
+        location: 'Salzburg',
+        price: '13,30'
       },
       {
-        href: 'https://images.pexels.com/photos/77931/pexels-photo-77931.jpeg?w=940&h=650&auto=compress&cs=tinysrgb',
         id: 5,
-        location: 'Ort 5',
-        name: 'Testraum 5',
-        price: '9,50'
+        name: 'Büroraum mit ruhiger Lage',
+        href: 'https://images.pexels.com/photos/77931/pexels-photo-77931.jpeg?w=940&h=650&auto=compress&cs=tinysrgb',
+        location: 'Simbach',
+        price: '4,50'
       }
     ];
     return { rooms };
