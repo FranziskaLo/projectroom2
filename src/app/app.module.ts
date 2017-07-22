@@ -45,8 +45,7 @@ import { SearchComponent } from './search/search.component';
     RoomProfileModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
-  providers: [MockBackend, BaseRequestOptions, RoomService, AuthService, ModalService,
-    AlertService],
+  providers: [MockBackend, BaseRequestOptions, RoomService, AuthService, ModalService, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

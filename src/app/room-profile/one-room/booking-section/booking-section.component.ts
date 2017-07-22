@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
-import { RoomService } from '../../../shared/services/rooms/room-backend/room.service';
 import { ModalService } from '../../../shared/services/modal/modal.service';
 import { AuthService } from '../../../shared/auth/auth.service';
+import { RoomService } from '../../../shared/services/rooms/room-backend/room.service';
 
 @Component({
   moduleId: module.id.toString(),
@@ -12,16 +13,14 @@ import { AuthService } from '../../../shared/auth/auth.service';
   styles: []
 })
 export class BookingSectionComponent implements OnInit {
-  private rooms: any[] = [];
+  room: { id: number, price: string };
 
-  constructor(private modalService: ModalService, private authService: AuthService, private roomService: RoomService) { }
+  constructor(private modalService: ModalService, private authService: AuthService, private route: ActivatedRoute,
+    private roomService: RoomService) { }
 
   ngOnInit() {
-    this.getRoomsFromAPI();
-  }
-
-  getRoomsFromAPI(): void {
-    this.roomService.getRooms().then(rooms => this.rooms = rooms);
+    const id = +this.route.snapshot.params['id'];
+    this.room = this.roomService.getRoom2(id);
   }
 
   // Öffnen des Pop-ups

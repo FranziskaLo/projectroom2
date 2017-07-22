@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { RoomService } from '../../../shared/services/rooms/room-backend/room.service';
+
 @Component({
   selector: 'app-room-header',
   templateUrl: './room-header.component.html',
   styles: []
 })
 export class RoomHeaderComponent implements OnInit {
-  room: { id: number };
+  room: { id: number, name: string, roompic: string };
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private roomService: RoomService) { }
 
   ngOnInit() {
-    this.room = {
-      id: this.route.snapshot.params['id']
-    };
+    const id = +this.route.snapshot.params['id'];
+    this.room = this.roomService.getRoom2(id);
   }
 }
