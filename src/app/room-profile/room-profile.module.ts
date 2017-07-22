@@ -12,6 +12,7 @@ import { RoomAttributesComponent } from './room-attributes/room-attributes.compo
 import { LandlordInfosComponent } from './landlord-infos/landlord-infos.component';
 import { RankingSectionComponent } from './ranking-section/ranking-section.component';
 import { RoomCommentsComponent } from './room-comments/room-comments.component';
+import { OneRoomComponent } from './one-room/one-room.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RoomCommentsComponent } from './room-comments/room-comments.component';
     RoomAttributesComponent,
     LandlordInfosComponent,
     RankingSectionComponent,
-    RoomCommentsComponent
+    RoomCommentsComponent,
+    OneRoomComponent
   ],
   imports: [
     CommonModule,
