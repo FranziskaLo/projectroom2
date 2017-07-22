@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 import { ModalService } from '../../../shared/services/modal/modal.service';
 import { AuthService } from '../../../shared/auth/auth.service';
@@ -11,10 +12,14 @@ import { AuthService } from '../../../shared/auth/auth.service';
   styles: []
 })
 export class BookingSectionComponent implements OnInit {
+  room: { price: string };
 
-  constructor(private modalService: ModalService, private authService: AuthService) { }
+  constructor(private modalService: ModalService, private authService: AuthService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.room = {
+      price: this.route.snapshot.params['price']
+    };
   }
 
   // Öffnen des Pop-ups

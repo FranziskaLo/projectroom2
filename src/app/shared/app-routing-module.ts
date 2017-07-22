@@ -10,8 +10,7 @@ import { PageNotFoundComponent } from '../shared/page-not-found/page-not-found.c
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'room-profile', component: RoomProfileComponent },
-  { path: 'room-profile/:id/:name/:roompic', component: OneRoomComponent },
+  { path: 'room-profile/:id/:name/:roompic/:price/:description/:country/:plz/:location/:hnr/:street', component: OneRoomComponent },
   { path: 'search', component: SearchComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' }
