@@ -19,7 +19,18 @@ export class RoomService {
       plz: '68165',
       location: 'Mannheim',
       hnr: '32',
-      street: 'Emanuel-Kant-Straße'
+      street: 'Emanuel-Kant-Straße',
+      owner: 'Max',
+      ownerdescip: 'Hallo alle zusammen! Ich bin Max und ich bin stehts auf der Suche nach tollen Orten zum Leben und Erleben. Vielleicht habt ihr ja einen schicken Raum? Ich freu mich darauf euch kennen zu lernen. Schaut auch gerne mal bei mir vorbei. Bis bald :)',
+      age: '22 Jahre',
+      usersince: '07.07.2017',
+      reliability: '100%',
+      totalrooms: '3',
+      phone: '+43 699 53941760',
+      email: 'm.mustermann@hotmail.com',
+      roomdescription_rating: '4.2',
+      arrangement_rating: '5.0',
+      conditions_rating: '5.0'
     },
     {
       id: 2,
@@ -32,7 +43,18 @@ export class RoomService {
       plz: '22113',
       location: 'Hamburg',
       hnr: '2',
-      street: 'Liebigstraße'
+      street: 'Liebigstraße',
+      owner: 'Lara',
+      ownerdescip: '',
+      age: '27 Jahre',
+      usersince: '17.04.2017',
+      reliability: '100%',
+      totalrooms: '1',
+      phone: '+49 152 11111111',
+      email: 'lara.l@googlemail.com',
+      roomdescription_rating: '4.7',
+      arrangement_rating: '5.0',
+      conditions_rating: '5.0'
     },
     {
       id: 3,
@@ -45,7 +67,18 @@ export class RoomService {
       country: 'Deutschland',
       plz: '60313',
       hnr: '10',
-      street: 'Zeil'
+      street: 'Zeil',
+      owner: 'Anna',
+      ownerdescip: '',
+      age: '31 Jahre',
+      usersince: '05.06.2017',
+      reliability: '100%',
+      totalrooms: '5',
+      phone: '+49173 123456789',
+      email: 'anna_amsel@gmx.de',
+      roomdescription_rating: '5.0',
+      arrangement_rating: '5.0',
+      conditions_rating: '5.0'
     },
     {
       id: 4,
@@ -58,7 +91,18 @@ export class RoomService {
       country: 'Deutschland',
       plz: '80331',
       hnr: 'Hauptstraße',
-      street: '18'
+      street: '18',
+      owner: 'Nico',
+      ownerdescip: '',
+      age: '21 Jahre',
+      usersince: '14.06.2017',
+      reliability: '95%',
+      totalrooms: '9',
+      phone: '+49 176 931650777',
+      email: 'nico.huber@gmx.de',
+      roomdescription_rating: '4.0',
+      arrangement_rating: '4.6',
+      conditions_rating: '5.0'
     },
     {
       id: 5,
@@ -71,7 +115,18 @@ export class RoomService {
       country: 'Deutschland',
       plz: '84359',
       hnr: '1',
-      street: 'Kreuzbergerweg'
+      street: 'Kreuzbergerweg',
+      owner: 'Helmut',
+      ownerdescip: '',
+      age: '29 Jahre',
+      usersince: '03.07.2017',
+      reliability: '99%',
+      totalrooms: '4',
+      phone: '+49 660 3796219',
+      email: 'heli.b567@gmx.de',
+      roomdescription_rating: '4.5',
+      arrangement_rating: '4.9',
+      conditions_rating: '4.8'
     }
   ];
 
