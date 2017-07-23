@@ -1,0 +1,35 @@
+.searchpage {
+  background-color: $mainBackground;
+  color: $mainblack;
+  font-family: $mainFontFamily;
+  text-transform: uppercase;
+  font-size: 55px;
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 10px;
+
+  .search_amount {
+    color: $mainblue;
+    font-size: 40px;
+  }
+}
+
+
+.results {
+  padding-left: 18%;
+  background-color: $mainBackground;
+
+  @media (max-width: 1000px) {
+    padding-left: 0;
+    background-color: $mainBackground;
+  }
+
+  .room_result {
+    width: 320px;
+    height: 320px;
+    background-color: red;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
