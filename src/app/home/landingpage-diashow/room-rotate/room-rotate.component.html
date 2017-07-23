@@ -1,35 +1,28 @@
-<div class="row bgcolordia" *ngIf="rooms.length>0">
-  <div class="col-lg-4 text-center roomdetails">
-    <div class="roompicture">
-      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="next()" src="{{ rooms[pSelectedRoom].roompic }}" />
-      <div class="infobox"> </div>
+<div class="row rotate">
+  <div class="room_rotate" *ngIf="showRooms" (click)="next()">
+    <img src="{{ rooms[pSelectedRoom].roompic }}" class="rotate_pic" style="filter: brightness(40%);" />
+    <div class="rotate_info">
+      <div class="rotate_detail1">{{ rooms[pSelectedRoom].name }}</div>
+      <div class="rotate_detail2">in {{ rooms[pSelectedRoom].location }}</div>
+      <div class="rotate_detail3">{{ rooms[pSelectedRoom].price }} <span style="font-size: 18px;">€ / Stunde</span></div>
     </div>
-    <div class="room_name">{{ rooms[pSelectedRoom].name }}</div>
-    <div class="room_location">in {{ rooms[pSelectedRoom].location }}</div>
-    <div class="infobox_bright"></div>
-    <div class="room_price">{{ rooms[pSelectedRoom].price }}</div>
-    <div class="room_currency">€ / h</div>
   </div>
-  <div class="col-lg-4 text-center roomdetails_bright">
-    <div class="roompicture">
-      <a (click)="onLoadRoom()" style="cursor: pointer;"><img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].roompic }}" /></a>
-      <div class="infobox"> </div>
+
+  <div class="room_rotate" *ngIf="showRooms" (click)="onLoadRoom()">
+    <img src="{{ rooms[mSelectedRoom].roompic }}" class="rotate_pic" />
+    <div class="rotate_info">
+      <div class="rotate_detail1">{{ rooms[mSelectedRoom].name }}</div>
+      <div class="rotate_detail2">in {{ rooms[mSelectedRoom].location }}</div>
+      <div class="rotate_detail3">{{ rooms[mSelectedRoom].price }} <span style="font-size: 18px;">€ / Stunde</span></div>
     </div>
-    <div class="room_name">{{ rooms[mSelectedRoom].name }}</div>
-    <div class="room_location">in {{ rooms[mSelectedRoom].location }}</div>
-    <div class="infobox_bright"></div>
-    <div class="room_price">{{ rooms[mSelectedRoom].price }}</div>
-    <div class="room_currency">€ / h</div>
   </div>
-  <div class="col-lg-4 text-center roomdetails">
-    <div class="roompicture">
-      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="previous()" src="{{ rooms[nSelectedRoom].roompic }}" />
-      <div class="infobox"> </div>
+
+  <div class="room_rotate" *ngIf="showRooms" (click)="previous()">
+    <img src="{{ rooms[nSelectedRoom].roompic }}" class="rotate_pic" style="filter: brightness(40%);" />
+    <div class="rotate_info">
+      <div class="rotate_detail1">{{ rooms[nSelectedRoom].name }}</div>
+      <div class="rotate_detail2">in {{ rooms[nSelectedRoom].location }}</div>
+      <div class="rotate_detail3">{{ rooms[nSelectedRoom].price }} <span style="font-size: 18px;">€ / Stunde</span></div>
     </div>
-    <div class="room_name">{{ rooms[nSelectedRoom].name }}</div>
-    <div class="room_location">in {{ rooms[nSelectedRoom].location }}</div>
-    <div class="infobox_bright"></div>
-    <div class="room_price">{{ rooms[nSelectedRoom].price }}</div>
-    <div class="room_currency">€ / h</div>
   </div>
 </div>

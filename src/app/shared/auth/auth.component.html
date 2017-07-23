@@ -36,8 +36,8 @@
           </div>
           <div class="form-group">
             <label for="bday">Geburtsdatum</label>
-            <input type="date" id="bday" name="bday" ngModel class="form-control" style="width: 160px;" max='1999-07-28' required #sb="ngModel"
-            />
+            <input type="date" id="bday" name="bday" ngModel class="form-control" style="width: 160px;" min='1920-01-01' max='1999-07-28'
+              required #sb="ngModel" />
             <span *ngIf="!sb.valid && sb.touched">Please enter your birthday.</span>
           </div>
           <div class="form-group">

@@ -20,6 +20,9 @@ export class SearchComponent implements OnInit {
     this.rooms = this.roomService.getRooms();
   }
 
+  i = 0;
+  selectedRoom = 0;
+
   rightLocation() {
     if (this.citys.city === this.rooms[0].location) {
       return true;

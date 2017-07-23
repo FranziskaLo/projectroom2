@@ -1,8 +1,6 @@
-<!-- <p>
-  {{ citys.city }}
-</p> -->
 <div class="row searchpage">Suchergebnisse / <span class="search_amount">// 8 Räume gefunden</span></div>
 <div class="row results">
+  <!-- Könnte man durch *ngFor optimieren...  -->
   <div *ngIf="rightLocation()" class="room_result" [routerLink]="['/room-profile', 1]">
     <img src="{{ rooms[0].roompic }}" class="result_pic" />
     <div class="result_info">
