@@ -12,10 +12,7 @@ export class SearchComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.queryParams);
-    // this.citys = this.route.snapshot.queryParams['city'];
     const city = this.route.snapshot.queryParams['city'];
     this.citys = { city };
-    // this.room = this.roomService.getRoom(id);
   }
 }

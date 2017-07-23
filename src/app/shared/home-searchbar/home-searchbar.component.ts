@@ -14,9 +14,4 @@ export class HomeSearchbarComponent implements OnInit {
       'search': new FormControl(null)
     });
   }
-
-  onSubmit() {
-    console.log(this.searchForm);
-  }
-
 }
