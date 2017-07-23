@@ -1,4 +1,6 @@
-<div class="row searchpage">Suchergebnisse / <span class="search_amount">// 8 Räume gefunden</span></div>
+<div class="row searchpage">Suchergebnisse / <span class="search_amount">//<span class="search_amount" *ngIf="!rightLocation() && !rightLocation2() && !rightLocation3() && !rightLocation4() && !rightLocation5() && !rightLocation6()"> Keine</span>  Räume gefunden
+  </span>
+</div>
 <div class="row results">
   <!-- Könnte man durch *ngFor optimieren...  -->
   <div *ngIf="rightLocation()" class="room_result" [routerLink]="['/room-profile', 1]">
