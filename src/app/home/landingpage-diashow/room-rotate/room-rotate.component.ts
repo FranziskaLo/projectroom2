@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { RoomService } from '../room-backend/room.service';
+import { RoomService } from '../../../shared/services/rooms/room-backend/room.service';
 
 @Component({
   selector: 'app-room-rotate',

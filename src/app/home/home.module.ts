@@ -10,9 +10,9 @@ import { LandingpageDiashowComponent } from './landingpage-diashow/landingpage-d
 import { RecommendedRoomsComponent } from './landingpage-diashow/recommended-rooms/recommended-rooms.component';
 import { NewRoomsComponent } from './landingpage-diashow/new-rooms/new-rooms.component';
 import { RandomRoomsComponent } from './landingpage-diashow/random-rooms/random-rooms.component';
+import { RoomRotateComponent } from './landingpage-diashow/room-rotate/room-rotate.component';
 import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
 import { MemberCommentsComponent } from './member-comments/member-comments.component';
-import { RoomRotateComponent } from '../shared/services/rooms/room-rotate/room-rotate.component';
 
 
 
