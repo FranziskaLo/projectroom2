@@ -120,9 +120,6 @@ export class RoomService {
     }
   ];
 
-  constructor() { }
-
-
   getRooms() {
     return this.rooms;
   }
