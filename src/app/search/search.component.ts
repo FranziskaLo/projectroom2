@@ -19,4 +19,40 @@ export class SearchComponent implements OnInit {
     this.citys = { city };
     this.rooms = this.roomService.getRooms();
   }
+
+  rightLocation() {
+    if (this.citys.city === this.rooms[0].location) {
+      return true;
+    }
+  }
+
+  rightLocation2() {
+    if (this.citys.city === this.rooms[1].location) {
+      return true;
+    }
+  }
+
+  rightLocation3() {
+    if (this.citys.city === this.rooms[2].location) {
+      return true;
+    }
+  }
+
+  rightLocation4() {
+    if (this.citys.city === this.rooms[3].location) {
+      return true;
+    }
+  }
+
+  rightLocation5() {
+    if (this.citys.city === this.rooms[4].location) {
+      return true;
+    }
+  }
+
+  rightLocation6() {
+    if (this.citys.city === this.rooms[5].location) {
+      return true;
+    }
+  }
 }

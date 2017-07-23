@@ -3,7 +3,7 @@
 </p> -->
 <div class="row searchpage">Suchergebnisse / <span class="search_amount">// 8 Räume gefunden</span></div>
 <div class="row results">
-  <div class="room_result">
+  <div *ngIf="rightLocation()" class="room_result" [routerLink]="['/room-profile', 1]">
     <img src="{{ rooms[0].roompic }}" class="result_pic" />
     <div class="result_info">
       <div class="result_detail1">{{ rooms[0].name }}</div>
@@ -11,7 +11,7 @@
       <div class="result_detail2">{{ rooms[0].price }} <span style="font-size: 14px;">€ / Stunde</span></div>
     </div>
   </div>
-  <div class="room_result">
+  <div *ngIf="rightLocation2()" class="room_result" [routerLink]="['/room-profile', 2]">
     <img src="{{ rooms[1].roompic }}" class="result_pic" />
     <div class="result_info">
       <div class="result_detail1">{{ rooms[1].name }}</div>
@@ -19,7 +19,7 @@
       <div class="result_detail2">{{ rooms[1].price }} <span style="font-size: 14px;">€ / Stunde</span></div>
     </div>
   </div>
-  <div class="room_result">
+  <div *ngIf="rightLocation3()" class="room_result" [routerLink]="['/room-profile', 3]">
     <img src="{{ rooms[2].roompic }}" class="result_pic" />
     <div class="result_info">
       <div class="result_detail1">{{ rooms[2].name }}</div>
@@ -27,7 +27,7 @@
       <div class="result_detail2">{{ rooms[2].price }} <span style="font-size: 14px;">€ / Stunde</span></div>
     </div>
   </div>
-  <div class="room_result">
+  <div *ngIf="rightLocation4()" class="room_result" [routerLink]="['/room-profile', 4]">
     <img src="{{ rooms[3].roompic }}" class="result_pic" />
     <div class="result_info">
       <div class="result_detail1">{{ rooms[3].name }}</div>
@@ -35,7 +35,7 @@
       <div class="result_detail2">{{ rooms[3].price }} <span style="font-size: 14px;">€ / Stunde</span></div>
     </div>
   </div>
-  <div class="room_result">
+  <div *ngIf="rightLocation5()" class="room_result" [routerLink]="['/room-profile', 5]">
     <img src="{{ rooms[4].roompic }}" class="result_pic" />
     <div class="result_info">
       <div class="result_detail1">{{ rooms[4].name }}</div>
@@ -43,7 +43,7 @@
       <div class="result_detail2">{{ rooms[4].price }} <span style="font-size: 14px;">€ / Stunde</span></div>
     </div>
   </div>
-  <div class="room_result">
+  <div *ngIf="rightLocation6()" class="room_result" [routerLink]="['/room-profile', 6]">
     <img src="{{ rooms[5].roompic }}" class="result_pic" />
     <div class="result_info">
       <div class="result_detail1">{{ rooms[5].name }}</div>
