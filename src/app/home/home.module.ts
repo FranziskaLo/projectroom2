@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
 
 import { HomeComponent } from './home.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
-import { HomeSearchbarComponent } from './home-header/home-searchbar/home-searchbar.component';
+import { HomeSearchbarComponent } from '../shared/home-searchbar/home-searchbar.component';
 import { LandingpageDiashowComponent } from './landingpage-diashow/landingpage-diashow.component';
 import { RecommendedRoomsComponent } from './landingpage-diashow/recommended-rooms/recommended-rooms.component';
 import { NewRoomsComponent } from './landingpage-diashow/new-rooms/new-rooms.component';
@@ -20,7 +21,6 @@ import { MemberCommentsComponent } from './member-comments/member-comments.compo
   declarations: [
     HomeComponent,
     HomeHeaderComponent,
-    HomeSearchbarComponent,
     LandingpageDiashowComponent,
     RecommendedRoomsComponent,
     NewRoomsComponent,
@@ -31,7 +31,8 @@ import { MemberCommentsComponent } from './member-comments/member-comments.compo
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class HomeModule {

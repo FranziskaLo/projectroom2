@@ -7,17 +7,20 @@ import { AppRoutingModule } from './app-routing-module';
 
 import { ModalComponent } from '../shared/services/modal/modal.component';
 import { AuthComponent } from './auth/auth.component';
+import { HomeSearchbarComponent } from './home-searchbar/home-searchbar.component';
 
 @NgModule({
   declarations: [
     ModalComponent,
-    AuthComponent
+    AuthComponent,
+    HomeSearchbarComponent
   ],
   exports: [
     AppRoutingModule,
     CommonModule,
     ModalComponent,
-    AuthComponent
+    AuthComponent,
+    HomeSearchbarComponent
   ],
   imports: [
     AppRoutingModule,
