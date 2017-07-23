@@ -5,8 +5,8 @@
   text-transform: uppercase;
   font-size: 55px;
   text-align: center;
-  padding-top: 45px;
-  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-bottom: 20px;
 
   .search_amount {
     color: $mainblue;
@@ -26,20 +26,40 @@
 
   .room_result {
     width: 320px;
-    height: 320px;
+    height: 280px;
     float: left;
     margin-left: 20px;
     margin-bottom: 20px;
 
     .result_pic {
       width: 320px;
-      height: 220px;
+      height: 280px;
+      object-fit: cover;
     }
 
     .result_info {
       width: 320px;
-      height: 100px;
+      height: 80px;
       background-color: $mainblack;
+      position: absolute;
+      margin-top: -80px;
+      opacity: 0.6;
+      color: $mainBackground;
+      overflow: auto;
+
+      .result_detail1 {
+        width: fit-content;
+        margin-top: 4px;
+        margin-left: 7px;
+        font-size: 14px;
+      }
+
+      .result_detail2 {
+        font-size: 24px;
+        text-align: right;
+        margin-right: 10px;
+        margin-top: -2px;
+      }
     }
   }
 }
