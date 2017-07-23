@@ -14,7 +14,6 @@ export class RoomRotateComponent implements OnInit {
   roomPrevious: boolean;
   roomNext: boolean;
   private rooms: any[] = [];
-  room: { id: number };
 
   constructor(http: Http, private roomService: RoomService, private router: Router) { }
 
@@ -61,7 +60,7 @@ export class RoomRotateComponent implements OnInit {
   }
 
   onLoadRoom() {
-    this.router.navigate(['/room-profile', this.room]);
+    this.router.navigate(['/room-profile', this.rooms[this.mSelectedRoom].id]);
   }
 
 }

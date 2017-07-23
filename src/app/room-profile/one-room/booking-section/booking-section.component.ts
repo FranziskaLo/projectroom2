@@ -20,7 +20,7 @@ export class BookingSectionComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.params['id'];
-    this.room = this.roomService.getRoom2(id);
+    this.room = this.roomService.getRoom(id);
   }
 
   // Öffnen des Pop-ups

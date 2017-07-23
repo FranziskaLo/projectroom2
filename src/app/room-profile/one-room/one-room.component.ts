@@ -15,6 +15,6 @@ export class OneRoomComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.params['id'];
-    this.room = this.roomService.getRoom2(id);
+    this.room = this.roomService.getRoom(id);
   }
 }
