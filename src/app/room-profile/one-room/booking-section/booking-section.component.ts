@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { ModalService } from '../../../shared/services/modal/modal.service';
 import { AuthService } from '../../../shared/auth/auth.service';
-import { RoomService } from '../../../shared/services/rooms/room-backend/room.service';
+import { RoomService } from '../../../shared/services/rooms/room.service';
 
 @Component({
   moduleId: module.id.toString(),

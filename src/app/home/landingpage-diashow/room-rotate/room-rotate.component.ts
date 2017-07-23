@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { RoomService } from '../../../shared/services/rooms/room-backend/room.service';
+import { RoomService } from '../../../shared/services/rooms/room.service';
 
 @Component({
   selector: 'app-room-rotate',
@@ -17,11 +17,7 @@ export class RoomRotateComponent implements OnInit {
   constructor(http: Http, private roomService: RoomService) { }
 
   ngOnInit() {
-    this.getRoomsFromAPI();
-  }
-
-  getRoomsFromAPI(): void {
-    this.roomService.getRooms().then(rooms => this.rooms = rooms);
+    this.rooms = this.roomService.getRooms2();
   }
 
   pSelectedRoom = 2;

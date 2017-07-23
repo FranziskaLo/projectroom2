@@ -8,9 +8,7 @@ import { RoomProfileModule } from './room-profile/room-profile.module';
 import { SharedModule } from './shared/shared.module';
 
 // Imports for loading & configuing the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './shared/services/rooms/room-backend/in-memory-data.service';
-import { RoomService } from './shared/services/rooms/room-backend/room.service';
+import { RoomService } from './shared/services/rooms/room.service';
 
 import { AuthService } from './shared/auth/auth.service';
 import { AlertService } from './shared/services/authentication/alert.service';
@@ -42,8 +40,7 @@ import { SearchComponent } from './search/search.component';
     FormsModule,
     HttpModule,
     SharedModule,
-    RoomProfileModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    RoomProfileModule
   ],
   providers: [MockBackend, BaseRequestOptions, RoomService, AuthService, ModalService, AlertService],
   bootstrap: [AppComponent]

@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
-import { MdDatepickerModule, MdNativeDateModule, MdCheckboxModule } from '@angular/material';
-import { DateTimePickerModule } from 'ng-pick-datetime';
+import { MdCheckboxModule } from '@angular/material';
 
 import { RoomProfileComponent } from '../room-profile/room-profile.component';
 import { RoomHeaderComponent } from './one-room/room-header/room-header.component';
@@ -30,10 +29,7 @@ import { OneRoomComponent } from './one-room/one-room.component';
     CommonModule,
     FormsModule,
     SharedModule,
-    MdDatepickerModule,
-    MdNativeDateModule,
     MdCheckboxModule,
-    DateTimePickerModule
   ]
 })
 export class RoomProfileModule {
