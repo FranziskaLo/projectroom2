@@ -6,7 +6,6 @@ export class RoomService {
     {
       id: 1,
       name: 'meine Küche für einen gemeinsamen Kochabend',
-      href: 'http://orientalresidence.azureedge.net/images/thumb-meeting-boardroom.jpg',
       roompic: '../../../../assets/kitchen.jpg',
       price: '5,25',
       description: 'Hey kommt vorbei und kocht gemeinsam in meiner kleinen Küche. Meine Küche ist groß, hat alles, was man typischerweise so benötigt und steht euch gerne zu euren Diensten! Ich freu mich auf euch :)',
@@ -30,7 +29,6 @@ export class RoomService {
     {
       id: 2,
       name: 'cooler Raum zum Relaxen',
-      href: 'https://officesnapshots.com/wp-content/uploads/2015/12/small-meeting.jpg',
       roompic: '../../../../assets/relax.jpg',
       price: '4,00',
       description: 'Hallo meine lieben Leute der großen weiten Welt! Ihr seid total erschöpft und auch zu Hause kommt ihr aus diversen Gründen einfach nicht zur Ruhe? Dann seid ihr hier genau richtig :)!! Hiermit steht euch ein Raum mit angenehmer Atmosphäre zur Verfügung, der euch sicherlich viel Entspannung einbringt!',
@@ -54,7 +52,6 @@ export class RoomService {
     {
       id: 3,
       name: 'Klavier-Raum',
-      href: 'http://www.escalantebnb.com/images/room3med.jpg',
       roompic: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Yamaha_C7_Concert_Grand_Piano_at_Audio_Mix_House%2C_Studio_A.jpg',
       location: 'Frankfurt',
       price: '10,50',
@@ -78,7 +75,6 @@ export class RoomService {
     {
       id: 4,
       name: 'neu rennovierter Party-Raum',
-      href: 'http://kolkatainterior.in/images/living-room-interior/living-room-interior-project.jpg',
       roompic: '../../../../assets/party.jpg',
       location: 'München',
       price: '13,30',
@@ -102,7 +98,6 @@ export class RoomService {
     {
       id: 5,
       name: 'Büroraum mit ruhiger Lage',
-      href: 'https://images.pexels.com/photos/77931/pexels-photo-77931.jpeg?w=940&h=650&auto=compress&cs=tinysrgb',
       roompic: '../../../../assets/office.jpg',
       location: 'Simbach',
       price: '4,50',
@@ -128,11 +123,11 @@ export class RoomService {
   constructor() { }
 
 
-  getRooms2() {
+  getRooms() {
     return this.rooms;
   }
 
-  getRoom2(id: number) {
+  getRoom(id: number) {
     const room = this.rooms.find(
       (s) => {
         return s.id === id;

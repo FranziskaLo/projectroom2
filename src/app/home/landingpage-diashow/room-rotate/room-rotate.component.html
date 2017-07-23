@@ -1,7 +1,7 @@
 <div class="row bgcolordia" *ngIf="rooms.length>0">
   <div class="col-lg-4 text-center roomdetails">
     <div class="roompicture">
-      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="next()" src="{{ rooms[pSelectedRoom].href }}" />
+      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="next()" src="{{ rooms[pSelectedRoom].roompic }}" />
       <div class="infobox"> </div>
     </div>
     <div class="room_name">{{ rooms[pSelectedRoom].name }}</div>
@@ -12,7 +12,8 @@
   </div>
   <div class="col-lg-4 text-center roomdetails_bright">
     <div class="roompicture">
-      <a [routerLink]="['/room-profile', room.id]" *ngFor="let room of rooms" style="cursor: pointer;"><img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].href }}" /></a>
+      <!-- <a [routerLink]="['/room-profile', room.id]" *ngFor="let room of rooms" style="cursor: pointer;"><img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].roompic }}" /></a>  -->
+      <a (click)="onLoadRoom()" style="cursor: pointer;"><img class="imageDetails" *ngIf="showRooms" src="{{ rooms[mSelectedRoom].roompic }}" /></a>
       <div class="infobox"> </div>
     </div>
     <div class="room_name">{{ rooms[mSelectedRoom].name }}</div>
@@ -23,7 +24,7 @@
   </div>
   <div class="col-lg-4 text-center roomdetails">
     <div class="roompicture">
-      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="previous()" src="{{ rooms[nSelectedRoom].href }}" />
+      <img class="imageDetails imageSide" *ngIf="showRooms" (click)="previous()" src="{{ rooms[nSelectedRoom].roompic }}" />
       <div class="infobox"> </div>
     </div>
     <div class="room_name">{{ rooms[nSelectedRoom].name }}</div>

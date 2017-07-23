@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
 
 import { RoomService } from '../../../shared/services/rooms/room.service';
 
@@ -13,11 +14,12 @@ export class RoomRotateComponent implements OnInit {
   roomPrevious: boolean;
   roomNext: boolean;
   private rooms: any[] = [];
+  room: { id: number };
 
-  constructor(http: Http, private roomService: RoomService) { }
+  constructor(http: Http, private roomService: RoomService, private router: Router) { }
 
   ngOnInit() {
-    this.rooms = this.roomService.getRooms2();
+    this.rooms = this.roomService.getRooms();
   }
 
   pSelectedRoom = 2;
@@ -56,6 +58,10 @@ export class RoomRotateComponent implements OnInit {
     if (this.nSelectedRoom < 0) {
       this.nSelectedRoom = this.rooms.length - 1;
     }
+  }
+
+  onLoadRoom() {
+    this.router.navigate(['/room-profile', this.room]);
   }
 
 }
