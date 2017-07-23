@@ -11,7 +11,7 @@ export class HomeSearchbarComponent implements OnInit {
 
   ngOnInit() {
     this.searchForm = new FormGroup({
-      'search': new FormControl('Search for a city...')
+      'search': new FormControl(null)
     });
   }
 
