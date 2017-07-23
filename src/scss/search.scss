@@ -27,9 +27,19 @@
   .room_result {
     width: 320px;
     height: 320px;
-    background-color: red;
     float: left;
     margin-left: 20px;
     margin-bottom: 20px;
+
+    .result_pic {
+      width: 320px;
+      height: 220px;
+    }
+
+    .result_info {
+      width: 320px;
+      height: 100px;
+      background-color: $mainblack;
+    }
   }
 }
