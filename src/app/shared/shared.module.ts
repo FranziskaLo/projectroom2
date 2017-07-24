@@ -10,11 +10,14 @@ import { ModalComponent } from '../shared/services/modal/modal.component';
 import { AuthComponent } from './auth/auth.component';
 import { HomeSearchbarComponent } from './home-searchbar/home-searchbar.component';
 
+import { EqualValidatorDirective } from './auth/equal-validator.directive';
+
 @NgModule({
   declarations: [
     ModalComponent,
     AuthComponent,
-    HomeSearchbarComponent
+    HomeSearchbarComponent,
+    EqualValidatorDirective
   ],
   exports: [
     AppRoutingModule,
