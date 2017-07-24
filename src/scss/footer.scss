@@ -21,28 +21,15 @@ $halfHeight: $fullHeight / 2;
       height: $halfHeight;
       margin-top: 30px;
 
-      .links-left {
-      width: $halfWidth;
-      float: left;
-      text-align: left;
-
       a {
         color: $mainblack;
+
+        &.logo {
+          font-family: $mainFontFamily;
+          font-size: 40px;
+          text-decoration: none;
+        }
       }
-    }
-
-    .links-right {
-      text-align: left;
-
-      a {
-      color: $mainblack;
-    }
-    }
- }
-
-    .logo {
-      font-family: $mainFontFamily;
-      font-size: 40px;
     }
   }
 }
