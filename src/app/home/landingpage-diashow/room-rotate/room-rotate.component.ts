@@ -25,7 +25,7 @@ export class RoomRotateComponent implements OnInit {
   mSelectedRoom = 1;
   nSelectedRoom = 0;
 
-  next() {
+  previous() {
     this.pSelectedRoom++;
     if (this.pSelectedRoom > this.rooms.length - 1) {
       this.pSelectedRoom = 0;
@@ -42,7 +42,7 @@ export class RoomRotateComponent implements OnInit {
     }
   }
 
-  previous() {
+  next() {
     this.pSelectedRoom--;
     if (this.pSelectedRoom < 0) {
       this.pSelectedRoom = this.rooms.length - 1;
@@ -59,8 +59,17 @@ export class RoomRotateComponent implements OnInit {
     }
   }
 
-  onLoadRoom() {
+  loadPreviousRoom() {
+    this.router.navigate(['/room-profile', this.rooms[this.pSelectedRoom].id]);
+
+  }
+
+  loadCurrentRoom() {
     this.router.navigate(['/room-profile', this.rooms[this.mSelectedRoom].id]);
+  }
+
+  loadNextRoom() {
+    this.router.navigate(['/room-profile', this.rooms[this.nSelectedRoom].id]);
   }
 
 }

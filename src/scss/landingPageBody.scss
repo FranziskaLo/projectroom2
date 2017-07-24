@@ -117,5 +117,51 @@
         margin-top: -11px;
       }
     }
+
+    .rotate_arrow_left {
+      position: absolute;
+      font-size: 15px;
+      margin-top: -159px;
+      margin-left: 21px;
+      color: #fff !important;
+      background-color: transparent !important;
+      border: 1px solid #fff;
+      outline: 0;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      transition-delay: initial;
+
+      &:hover {
+        color: #000 !important;
+        background-color: #fff !important;
+        box-shadow: 0 0 0 4px rgba(255,255,255,0.27);
+      }
+    }
+
+    .rotate_arrow_right {
+      position: absolute;
+      font-size: 15px;
+      margin-top: -159px;
+      margin-left: 356px;
+      color: #fff !important;
+      background-color: transparent !important;
+      border: 1px solid #fff;
+      outline: 0;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      transition-delay: initial;
+
+      &:hover {
+        color: #000 !important;
+        background-color: #fff !important;
+        box-shadow: 0 0 0 4px rgba(255,255,255,0.27);
+      }
+    }
   }
 }

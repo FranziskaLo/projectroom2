@@ -1,14 +1,16 @@
 <div class="row rotate">
-  <div class="room_rotate" *ngIf="showRooms" (click)="next()">
-    <img src="{{ rooms[pSelectedRoom].roompic }}" class="rotate_pic" style="filter: brightness(40%);" />
-    <div class="rotate_info">
+  <div class="room_rotate" *ngIf="showRooms">
+    <img src="{{ rooms[pSelectedRoom].roompic }}" (click)="loadPreviousRoom()" class="rotate_pic" style="filter: brightness(40%);"
+    />
+    <div class="rotate_info" (click)="loadPreviousRoom()">
       <div class="rotate_detail1">{{ rooms[pSelectedRoom].name }}</div>
       <div class="rotate_detail2">in {{ rooms[pSelectedRoom].location }}</div>
       <div class="rotate_detail3">{{ rooms[pSelectedRoom].price }} <span style="font-size: 18px;">€ / Stunde</span></div>
     </div>
+    <div class="rotate_arrow_left" (click)="previous()">❮</div>
   </div>
 
-  <div class="room_rotate" *ngIf="showRooms" (click)="onLoadRoom()">
+  <div class="room_rotate" *ngIf="showRooms" (click)="loadCurrentRoom()">
     <img src="{{ rooms[mSelectedRoom].roompic }}" class="rotate_pic" />
     <div class="rotate_info">
       <div class="rotate_detail1">{{ rooms[mSelectedRoom].name }}</div>
@@ -17,12 +19,14 @@
     </div>
   </div>
 
-  <div class="room_rotate" *ngIf="showRooms" (click)="previous()">
-    <img src="{{ rooms[nSelectedRoom].roompic }}" class="rotate_pic" style="filter: brightness(40%);" />
-    <div class="rotate_info">
+  <div class="room_rotate" *ngIf="showRooms">
+    <img src="{{ rooms[nSelectedRoom].roompic }}" (click)="loadNextRoom()" class="rotate_pic" style="filter: brightness(40%);"
+    />
+    <div class="rotate_info" (click)="loadNextRoom()">
       <div class="rotate_detail1">{{ rooms[nSelectedRoom].name }}</div>
       <div class="rotate_detail2">in {{ rooms[nSelectedRoom].location }}</div>
       <div class="rotate_detail3">{{ rooms[nSelectedRoom].price }} <span style="font-size: 18px;">€ / Stunde</span></div>
     </div>
+    <div class="rotate_arrow_right" (click)="next()">❯</div>
   </div>
 </div>
