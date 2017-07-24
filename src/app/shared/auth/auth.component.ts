@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 
 import { ModalService } from '../services/modal/modal.service';
 import { AuthService } from './auth.service';
+import { UserService } from '../services/users/user.service';
+
 
 @Component({
   selector: 'app-auth',
@@ -11,8 +13,9 @@ import { AuthService } from './auth.service';
 export class AuthComponent implements OnInit {
   @ViewChild('f2') signupForm: NgForm;
   @ViewChild('f1') loginForm: NgForm;
+  user: { firstName: string, lastName: string, email: string, password: string, confirm_password: string };
 
-  constructor(private modalService: ModalService, private authService: AuthService) { }
+  constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -45,13 +48,18 @@ export class AuthComponent implements OnInit {
 
   // Registrierungsfunktion verbunden mit AuthService
   onSignup(form: NgForm) {
-    // const firstName = form.value.firstName;
-    // const lastName = form.value.lastName;
+    const firstName = form.value.firstName;
+    const lastName = form.value.lastName;
     // const bday = form.value.bday;
     const signin_email = form.value.signin_email;
     const signin_password = form.value.signin_password;
-    // const confirm_password = form.value.confirm_password;
+    const confirm_password = form.value.confirm_password;
     this.authService.signupUser(signin_email, signin_password);
+    this.userService.storeUser({ firstName, lastName, signin_email, signin_password, confirm_password })
+      .subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+      );
     this.signupForm.reset();
   }
 

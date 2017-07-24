@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { RoomService } from './shared/services/rooms/room.service';
 import { AuthService } from './shared/auth/auth.service';
 import { ModalService } from './shared/services/modal/modal.service';
+import { UserService } from './shared/services/users/user.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -34,7 +35,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     SharedModule,
     RoomProfileModule
   ],
-  providers: [BaseRequestOptions, RoomService, AuthService, ModalService],
+  providers: [BaseRequestOptions, RoomService, AuthService, ModalService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
