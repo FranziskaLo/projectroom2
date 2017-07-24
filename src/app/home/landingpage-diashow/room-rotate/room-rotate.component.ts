@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
 
 import { RoomService } from '../../../shared/services/rooms/room.service';
@@ -10,20 +9,29 @@ import { RoomService } from '../../../shared/services/rooms/room.service';
 })
 
 export class RoomRotateComponent implements OnInit {
-  showRooms = true;
-  roomPrevious: boolean;
-  roomNext: boolean;
-  private rooms: any[] = [];
-
-  constructor(http: Http, private roomService: RoomService, private router: Router) { }
-
-  ngOnInit() {
-    this.rooms = this.roomService.getRooms();
-  }
-
   pSelectedRoom = 2;
   mSelectedRoom = 1;
   nSelectedRoom = 0;
+  showRooms = true;
+  roomPrevious: boolean;
+  roomNext: boolean;
+  isDataAvailable = false;
+  rooms: any[] = [];
+
+  constructor(private roomService: RoomService, private router: Router) { }
+
+  ngOnInit() {
+    this.roomService.getRoomsFB()
+      .subscribe(
+      (data: any[]) => {
+        this.rooms = data;
+        console.log(data);
+        this.isDataAvailable = true;
+      },
+      (error) => console.log(error)
+      );
+    // this.rooms = this.roomService.getRooms();
+  }
 
   previous() {
     this.pSelectedRoom++;

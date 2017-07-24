@@ -1,4 +1,4 @@
-<div class="row rotate">
+<div class="row rotate" *ngIf="isDataAvailable">
   <div class="room_rotate" *ngIf="showRooms">
     <img src="{{ rooms[pSelectedRoom].roompic }}" (click)="loadPreviousRoom()" class="rotate_pic" style="filter: brightness(40%);"
     />

@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+
+import 'rxjs/Rx';
 
 @Injectable()
 export class RoomService {
@@ -143,6 +146,8 @@ export class RoomService {
     }
   ];
 
+  constructor(private http: Http) { }
+
   getRooms() {
     return this.rooms;
   }
@@ -154,5 +159,16 @@ export class RoomService {
       }
     );
     return room;
+  }
+
+  // Angefangen die Räume aus der Datenbank zu holen anstatt das oben aufgeführte Array zu nutzen
+  getRoomsFB() {
+    // Return the Observable
+    return this.http.get('https://projectroom2-dcd69.firebaseio.com/rooms.json')
+      .map(
+      (response: Response) => {
+        const data = response.json();
+        return data;
+      });
   }
 }

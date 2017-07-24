@@ -10,7 +10,8 @@ import { RoomService } from '../shared/services/rooms/room.service';
 })
 export class SearchComponent implements OnInit {
   citys: { city: string };
-  private rooms: any[] = [];
+  rooms: any[] = [];
+  isDataAvailable = false;
 
   constructor(private route: ActivatedRoute, private roomService: RoomService) { }
 
@@ -19,9 +20,6 @@ export class SearchComponent implements OnInit {
     this.citys = { city };
     this.rooms = this.roomService.getRooms();
   }
-
-  i = 0;
-  selectedRoom = 0;
 
   rightLocation() {
     if (this.citys.city === this.rooms[0].location) {
