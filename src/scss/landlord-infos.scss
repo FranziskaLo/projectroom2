@@ -100,6 +100,11 @@
           border-radius: 4px;
           padding: 17px;
           overflow: auto;
+
+          .infotext_overflow {
+            height: 99px;
+            overflow: auto;
+          }
         }
       }
 

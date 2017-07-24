@@ -63,6 +63,12 @@
       font-size: 13px;
       color: $mainblack;
       overflow: auto;
+
+      .description_overflow {
+        height: 109px;
+        overflow: auto;
+        padding-right: 10px;
+      }
     }
 
     .address {

@@ -5,7 +5,8 @@
         <div class="col-sm-3" style="padding: 0;"><img src="https://static.pexels.com/photos/29872/pexels-photo-29872.jpg" style="width: 200px; height: 200px; border-radius: 100%; margin-top: 5px; margin-left: 5px;"></div>
         <div class="col-sm-9">
           <div class="row" style="font-family: Century Gothic; font-size: 47px; margin-left: 8px;">{{ room.owner }}</div>
-          <div class="row infotext">{{ room.ownerdescip }}
+          <div class="row infotext">
+            <div class="infotext_overflow">{{ room.ownerdescip }}</div>
           </div>
           <ng-template [ngIf]="authService.isAuthenticated()">
             <div class="realfriend">Ein echter Freund!</div>
