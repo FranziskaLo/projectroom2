@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ModalService } from '../shared/services/modal/modal.service';
 import { AuthService } from '../shared/auth/auth.service';
+import { UserService } from '../shared/services/users/user.service';
 
 @Component({
   moduleId: module.id.toString(),
@@ -9,10 +10,19 @@ import { AuthService } from '../shared/auth/auth.service';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {
+  user: any[] = [];
 
-  constructor(private modalService: ModalService, private authService: AuthService) { }
+  constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getUser()
+      .subscribe(
+      (data: any[]) => {
+        this.user = data;
+        console.log(data);
+      },
+      (error) => console.log(error)
+      );
   }
 
   // Öffnen des Pop-ups
@@ -44,6 +54,5 @@ export class HeaderComponent implements OnInit {
   onLogout() {
     this.authService.logout();
   }
-
 
 }

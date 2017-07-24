@@ -52,13 +52,6 @@ export class AuthService {
     return this.token;
   }
 
-  // Sollte ich also mal in irgendeinem Service auf die DB zugreifen wollen mit get, post oder whatever...
-  // IMMER DAS ZUERST AUFRUFEN:
-  //// const token = this.authService.getToken();
-  // Wichtig ist dann auch '?auth=' hinter jeder .json mit dem Token, Beispiel:
-  //// this.http.get('https://projectroom2-dcd69.firebaseio.com/roomsData.json?auth=' + token)
-
-
   // Funktion, die feststellt, ob man authentifizeirt ist oder nicht
   isAuthenticated() {
     return this.token != null;

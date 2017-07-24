@@ -9,7 +9,7 @@
         <a *ngIf="!authService.isAuthenticated()" class="header-link" (click)="openModal('register')">anmelden/registrieren</a>
         <ng-template [ngIf]="authService.isAuthenticated()">
           <div class="navi_o header-link">
-            <button class="btn dropbtn">Hallo Chis!</button>
+            <button class="btn dropbtn">Hallo {{ user.firstName }}!</button>
             <div class="navi_o-content">
               <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
             </div>

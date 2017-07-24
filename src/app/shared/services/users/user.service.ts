@@ -15,4 +15,14 @@ export class UserService {
     // Creating a Ovservable
     return this.http.put('https://projectroom2-dcd69.firebaseio.com/user.json', user);
   }
+
+  getUser() {
+    // Return the Observable
+    return this.http.get('https://projectroom2-dcd69.firebaseio.com/user.json')
+      .map(
+      (response: Response) => {
+        const data = response.json();
+        return data;
+      });
+  }
 }

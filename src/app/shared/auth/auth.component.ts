@@ -50,7 +50,7 @@ export class AuthComponent implements OnInit {
   onSignup(form: NgForm) {
     const firstName = form.value.firstName;
     const lastName = form.value.lastName;
-    // const bday = form.value.bday;
+    const bday = form.value.bday;
     const signin_email = form.value.signin_email;
     const signin_password = form.value.signin_password;
     const confirm_password = form.value.confirm_password;
