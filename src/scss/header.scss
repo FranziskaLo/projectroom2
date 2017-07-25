@@ -5,10 +5,10 @@
   }
 
   .navbar-brand {
-    color: $mainblack !important;
-    font-family: $mainFontFamily;
-    font-weight: bold;
-    font-size: 35px;
+    .room2logo {
+      width: 100px;
+      margin-top: -14px;
+    }
   }
 
   .header-link {

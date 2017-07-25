@@ -24,10 +24,9 @@ $halfHeight: $fullHeight / 2;
       a {
         color: $mainblack;
 
-        &.logo {
-          font-family: $mainFontFamily;
-          font-size: 40px;
-          text-decoration: none;
+        .logo {
+          width: 51px;
+          margin-top: 14px;
         }
       }
     }
