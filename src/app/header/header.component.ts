@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 import { ModalService } from '../shared/services/modal/modal.service';
 import { AuthService } from '../shared/auth/auth.service';
@@ -11,6 +12,7 @@ import { UserService } from '../shared/services/users/user.service';
 })
 export class HeaderComponent implements OnInit {
   user: any[] = [];
+  searchForm: FormGroup;
 
   constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService) { }
 
@@ -23,6 +25,9 @@ export class HeaderComponent implements OnInit {
       },
       (error) => console.log(error)
       );
+    this.searchForm = new FormGroup({
+      'search': new FormControl(null)
+    });
   }
 
   // Öffnen des Pop-ups
