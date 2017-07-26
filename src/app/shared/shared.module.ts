@@ -24,7 +24,8 @@ import { EqualValidatorDirective } from './auth/equal-validator.directive';
     CommonModule,
     ModalComponent,
     AuthComponent,
-    HomeSearchbarComponent
+    HomeSearchbarComponent,
+    EqualValidatorDirective
   ],
   imports: [
     AppRoutingModule,

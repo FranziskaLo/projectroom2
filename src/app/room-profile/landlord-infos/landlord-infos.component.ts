@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { RoomService } from '../../../shared/services/rooms/room.service';
-import { AuthService } from '../../../shared/auth/auth.service';
+import { RoomService } from '../../shared/services/rooms/room.service';
+import { AuthService } from '../../shared/auth/auth.service';
 
 @Component({
   selector: 'app-landlord-infos',

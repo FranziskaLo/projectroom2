@@ -5,13 +5,12 @@ import { SharedModule } from '../shared/shared.module';
 import { MdCheckboxModule } from '@angular/material';
 
 import { RoomProfileComponent } from '../room-profile/room-profile.component';
-import { RoomHeaderComponent } from './one-room/room-header/room-header.component';
-import { BookingSectionComponent } from './one-room/booking-section/booking-section.component';
-import { RoomAttributesComponent } from './one-room/room-attributes/room-attributes.component';
-import { LandlordInfosComponent } from './one-room/landlord-infos/landlord-infos.component';
-import { RankingSectionComponent } from './one-room/ranking-section/ranking-section.component';
-import { RoomCommentsComponent } from './one-room/room-comments/room-comments.component';
-import { OneRoomComponent } from './one-room/one-room.component';
+import { RoomHeaderComponent } from './room-header/room-header.component';
+import { BookingSectionComponent } from './booking-section/booking-section.component';
+import { RoomAttributesComponent } from './room-attributes/room-attributes.component';
+import { LandlordInfosComponent } from './landlord-infos/landlord-infos.component';
+import { RankingSectionComponent } from './ranking-section/ranking-section.component';
+import { RoomCommentsComponent } from './room-comments/room-comments.component';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { OneRoomComponent } from './one-room/one-room.component';
     RoomAttributesComponent,
     LandlordInfosComponent,
     RankingSectionComponent,
-    RoomCommentsComponent,
-    OneRoomComponent
+    RoomCommentsComponent
   ],
   imports: [
     CommonModule,

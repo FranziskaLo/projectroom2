@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-
-import { AuthService } from '../../auth/auth.service';
-
 import 'rxjs/Rx';
 
 @Injectable()
@@ -148,7 +145,7 @@ export class RoomService {
     }
   ];
 
-  constructor(private http: Http, private authService: AuthService) { }
+  constructor(private http: Http) { }
 
   getRooms() {
     return this.rooms;
