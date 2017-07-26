@@ -42,14 +42,4 @@ export class WelcomeMessageComponent implements OnInit {
     // evt.currentTarget.className += ' tabblue';
   }
 
-  // // Einloggen
-  // onLogin(form: NgForm) {
-
-  // }
-
-  // // Registrieren
-  // onSignup(form: NgForm) {
-
-  // }
-
 }
