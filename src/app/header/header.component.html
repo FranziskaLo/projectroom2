@@ -2,16 +2,11 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a routerLink='/home' class="navbar-brand"><img class="room2logo" src="../assets/Logo-text-nachtblau.png" alt="room²" title="room²" /></a>
-      <!-- <form [formGroup]="searchForm" class="navbar-form">
-        <div class="input-group searchbar">
-          <input formControlName="search" type="text" placeholder="Search for a city..." class="form-control">
-          <div class="input-group-btn">
-            <button class="btn btn-default" [routerLink]="['/search']" [queryParams]="{city: searchForm.get('search').value}" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-          </div>
-        </div>
-      </form> -->
     </div>
     <div class="navbar-collapse">
+      <ul *ngIf="!isLandingPage()" class="nav navbar-nav">
+        <app-header-searchbar></app-header-searchbar>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <a *ngIf="!authService.isAuthenticated()" class="header-link" (click)="openModal('register')">anmelden/registrieren</a>
         <ng-template [ngIf]="authService.isAuthenticated()">

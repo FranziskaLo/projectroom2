@@ -60,3 +60,19 @@
     }
   }
 }
+
+form.header-search {
+  .searchbar {
+          width: 350px;
+
+          .input-group-btn {
+            width: 40px;
+
+            .btn-default {
+              border: none;
+              background-color: transparent;
+              color: $mainblue;
+            }
+          }
+        }
+}

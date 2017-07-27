@@ -1,0 +1,8 @@
+<form [formGroup]="searchForm" class="header-search navbar-form">
+  <div class="input-group searchbar">
+    <input formControlName="search" type="text" placeholder="Search for a city..." class="form-control" />
+    <div class="input-group-btn">
+      <button class="btn btn-default" [routerLink]="['/search']" [queryParams]="{city: searchForm.get('search').value}" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+  </div>
+</form>

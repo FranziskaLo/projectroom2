@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { ModalService } from '../shared/services/modal/modal.service';
 import { AuthService } from '../shared/auth/auth.service';
@@ -14,7 +15,8 @@ export class HeaderComponent implements OnInit {
   user: any[] = [];
   searchForm: FormGroup;
 
-  constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService) { }
+  constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService,
+    private router: Router) { }
 
   ngOnInit() {
     this.userService.getUser()
@@ -52,6 +54,12 @@ export class HeaderComponent implements OnInit {
   // Logout Funktion
   onLogout() {
     this.authService.logout();
+  }
+
+  isLandingPage() {
+    if (this.router.url === '/home') {
+      return true;
+    }
   }
 
 }

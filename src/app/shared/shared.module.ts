@@ -11,13 +11,15 @@ import { AuthComponent } from './auth/auth.component';
 import { HomeSearchbarComponent } from './home-searchbar/home-searchbar.component';
 
 import { EqualValidatorDirective } from './auth/equal-validator.directive';
+import { HeaderSearchbarComponent } from './header-searchbar/header-searchbar.component';
 
 @NgModule({
   declarations: [
     ModalComponent,
     AuthComponent,
     HomeSearchbarComponent,
-    EqualValidatorDirective
+    EqualValidatorDirective,
+    HeaderSearchbarComponent
   ],
   exports: [
     AppRoutingModule,
@@ -25,6 +27,7 @@ import { EqualValidatorDirective } from './auth/equal-validator.directive';
     ModalComponent,
     AuthComponent,
     HomeSearchbarComponent,
+    HeaderSearchbarComponent,
     EqualValidatorDirective
   ],
   imports: [
