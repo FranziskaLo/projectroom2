@@ -13,7 +13,7 @@ import { UserService } from '../services/users/user.service';
 export class AuthComponent implements OnInit {
   @ViewChild('f2') signupForm: NgForm;
   @ViewChild('f1') loginForm: NgForm;
-  user: { firstName: string, lastName: string, email: string, password: string, confirm_password: string };
+  userName = '';
 
   constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService) { }
 
@@ -37,12 +37,7 @@ export class AuthComponent implements OnInit {
     for (i = 0; i < content.length; i++) {
       content[i].style.display = 'none';
     }
-    // links = document.getElementsByClassName('tablinks');
-    // for (i = 0; i < links.length; i++) {
-    //   links[i].className = links[i].className.replace(' tabblue', '');
-    // }
     document.getElementById(sign_tab).style.display = 'block';
-    // event.target.className += ' tabblue';
   }
 
 
@@ -69,6 +64,10 @@ export class AuthComponent implements OnInit {
     const login_password = form.value.login_password;
     this.authService.loginUser(login_email, login_password);
     this.loginForm.reset();
+  }
+
+  onUpdateUserName(event: Event) {
+    this.userName = (<HTMLInputElement>event.target).value;
   }
 
 }

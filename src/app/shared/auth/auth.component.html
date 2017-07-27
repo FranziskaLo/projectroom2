@@ -26,7 +26,8 @@
         <form (ngSubmit)="onSignup(f2)" #f2="ngForm">
           <div class="form-group">
             <label for="firstName">Vorname</label>
-            <input type="text" id="firstName" name="firstName" ngModel class="form-control" required #sf="ngModel" />
+            <input type="text" id="firstName" (input)="onUpdateUserName($event)" name="firstName" ngModel class="form-control" required
+              #sf="ngModel" />
             <span *ngIf="!sf.valid && sf.touched">Please enter your first name.</span>
           </div>
           <div class="form-group">
@@ -71,7 +72,7 @@
   <div class="modal">
     <div class="modal-body">
       <div class="welcome-title">Willkommen!</div>
-      <div class="welcome-text1">Hallo Chris :)</div>
+      <div class="welcome-text1">Hallo {{ userName }} :)</div>
       <div class="welcome-text2">Deine Registrierung ist jetzt abgeschlossen.<br />Wir wünschen Dir viel Spaß beim Stöbern und Entdecken. Sicher findest
         Du einen Platz für Dich oder wirst selbst zum Raumteiler!<br /><br />Wir freuen uns, dass Du dabei bist und wünschen
         Dir viel Spaß!</div>
