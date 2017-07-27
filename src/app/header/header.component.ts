@@ -14,6 +14,7 @@ import { UserService } from '../shared/services/users/user.service';
 export class HeaderComponent implements OnInit {
   user: any[] = [];
   searchForm: FormGroup;
+  windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
 
   constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService,
     private router: Router) { }
@@ -58,6 +59,12 @@ export class HeaderComponent implements OnInit {
 
   isLandingPage() {
     if (this.router.url === '/home') {
+      return true;
+    }
+  }
+
+  isSmallSize() {
+    if (this.windowWidth < 768) {
       return true;
     }
   }

@@ -4,7 +4,7 @@
       <a routerLink='/home' class="navbar-brand"><img class="room2logo" src="../assets/Logo-text-nachtblau.png" alt="room²" title="room²" /></a>
     </div>
     <div class="navbar-collapse">
-      <ul *ngIf="!isLandingPage()" class="nav navbar-nav">
+      <ul *ngIf="!isLandingPage() || (isLandingPage() && isSmallSize())" class="nav navbar-nav">
         <app-header-searchbar></app-header-searchbar>
       </ul>
       <ul class="nav navbar-nav navbar-right">
