@@ -57,9 +57,25 @@
               reverse="false" #scp="ngModel" />
             <span *ngIf="!scp.valid && scp.touched">Password mismatch</span>
           </div>
-          <button [disabled]="!f2.valid" class="btn button_style" type="submit">Registrieren</button>
+          <button [disabled]="!f2.valid" class="btn button_style" (click)="closeModal('register');" (click)="openModal('welcome')"
+            type="submit">Registrieren</button>
         </form>
       </div>
+    </div>
+  </div>
+  <div class="modal-background"></div>
+</app-modal>
+
+<!-- Sichtbar, sobald man auf sich erfolgreich registriert hat -->
+<app-modal id="welcome" class="modal-welcome">
+  <div class="modal">
+    <div class="modal-body">
+      <div class="welcome-title">Willkommen!</div>
+      <div class="welcome-text1">Hallo Chris :)</div>
+      <div class="welcome-text2">Deine Registrierung ist jetzt abgeschlossen.<br />Wir wünschen Dir viel Spaß beim Stöbern und Entdecken. Sicher findest
+        Du einen Platz für Dich oder wirst selbst zum Raumteiler!<br /><br />Wir freuen uns, dass Du dabei bist und wünschen
+        Dir viel Spaß!</div>
+      <button class="btn button_style" (click)="closeModal('welcome');">Los geht's</button>
     </div>
   </div>
   <div class="modal-background"></div>
