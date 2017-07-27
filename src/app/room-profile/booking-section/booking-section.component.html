@@ -11,9 +11,9 @@
       </div>
       <div class="data">
         <div class="booking_font" style="margin-top: 5px; margin-left: -41px;">von</div>
-        <input type="datetime-local" class="datetime" [(ngModel)]="dateinput1" min="2017-07-22T01:00:00">
+        <input type="datetime-local" class="datetime" [(ngModel)]="dateiinput1" min="2017-07-22T01:00:00">
         <div class="booking_font" style="margin-top: -42px; margin-left: 236px;">bis</div>
-        <input type="datetime-local" class="datetime" [(ngModel)]="dateinput2" style="margin-left: 71px;" min="2017-07-22T02:00:00">
+        <input type="datetime-local" class="datetime" [(ngModel)]="dateiinput2" style="margin-left: 71px;" min="2017-07-22T02:00:00">
         <div class="booking_font" style="margin-top: -42px; margin-left: 505px;">Personen</div>
         <input type="number" class="numberinput" style="width: 90px; margin-left: 129px;" min="1" />
       </div>
@@ -34,10 +34,10 @@
       </div>
       <div class="data">
         <div class="booking_font" style="margin-top: 5px; margin-left: -41px;">von</div>
-        <input ngModel type="datetime-local" class="datetime" [(ngModel)]="dateinput1" min="2017-07-22T01:00:00" required #d1="ngModel"
+        <input ngModel type="datetime-local" class="datetime" [(ngModel)]="dateiinput1" min="2017-07-22T01:00:00" required #d1="ngModel"
         />
         <div class="booking_font" style="margin-top: -42px; margin-left: 236px;">bis</div>
-        <input ngModel type="datetime-local" class="datetime" [(ngModel)]="dateinput2" style="margin-left: 71px;" min="2017-07-22T02:00:00"
+        <input ngModel type="datetime-local" class="datetime" [(ngModel)]="dateiinput2" style="margin-left: 71px;" min="2017-07-22T02:00:00"
           required #d2="ngModel" />
         <div class="booking_font" style="margin-top: -42px; margin-left: 505px;">Personen</div>
         <input type="number" class="numberinput" style="width: 90px; margin-left: 129px;" min="1" />
@@ -94,16 +94,16 @@
       </div>
       <div class="row info">
         <div class="col-sm-3">
-          <md-checkbox class="mycheckbox" [(ngModel)]="disableButton1"></md-checkbox>
+          <md-checkbox class="mycheckbox" [(ngModel)]="disableButton"></md-checkbox>
         </div>
         <div class="col-sm-9 infotext">Mit dem Klick auf "sofort verbindlich buchen" bestätige ich die <a href='/not-found'>AGB</a>,
-          <a href='/not-found'>Nutzerrichtlinien</a>und
+          <a href='/not-found'>Nutzerrichtlinien</a> und
           <a href='/not-found'>Hinweise zur Miete und Vermietung von Räumen</a> gelesen zu haben und akzeptiere diese. Ich
           bin informiert, dass ich mit dem Klick auf "sofort verbindlich buchen" eine entsprechend verbindliche Zusage erteile.
           Für die Stornierung einer solchen Buchung fallen Gebühren an, die ich zahlen muss. Ebenso bin ich mir bewusst,
           dass dies negative Auswirkungen auf meine Bewertung auf dieser Plattform hat.</div>
       </div>
-      <button class="btn button_style" (click)="closeModal('directbooking');" (click)="openModal('success')" [disabled]="!disableButton1 || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid || !d1.valid || !d2.valid">Sofort verbindlich buchen</button>
+      <button class="btn button_style" (click)="closeModal('directbooking');" (click)="openModal('success')" [disabled]="!disableButton || !ko.valid || !ib.valid || !vo.valid || !na.valid || !la.valid || !plz.valid || !sta.valid || !str.valid || !hnr.valid || !d1.valid || !d2.valid">Sofort verbindlich buchen</button>
     </div>
   </div>
   <div class="modal-background"></div>

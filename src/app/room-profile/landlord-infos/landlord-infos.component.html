@@ -6,7 +6,7 @@
         <div class="col-sm-9">
           <div class="row" style="font-family: Century Gothic; font-size: 47px; margin-left: 8px;">{{ room.owner }}</div>
           <div class="row infotext">
-            <div class="infotext_overflow">{{ room.ownerdescip }}</div>
+            <div class="infotext_overflow">{{ room.ownerdescription }}</div>
           </div>
           <ng-template [ngIf]="authService.isAuthenticated()">
             <div class="realfriend">Ein echter Freund!</div>
