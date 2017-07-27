@@ -53,14 +53,12 @@ export class AuthComponent implements OnInit {
     this.authService.signupUser(signin_email, signin_password);
     this.userService.storeUser({ firstName, lastName, signin_email, signin_password, confirm_password })
       .subscribe(
-      (response) => console.log(response),
       (error) => console.log(error)
       );
     this.userService.getUser()
       .subscribe(
       (data: any[]) => {
         this.user = data;
-        console.log(data);
       },
       (error) => console.log(error)
       );
@@ -75,7 +73,6 @@ export class AuthComponent implements OnInit {
       .subscribe(
       (data: any[]) => {
         this.user = data;
-        console.log(data);
       },
       (error) => console.log(error)
       );

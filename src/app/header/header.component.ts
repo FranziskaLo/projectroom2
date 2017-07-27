@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
       .subscribe(
       (data: any[]) => {
         this.user = data;
-        console.log(data);
       },
       (error) => console.log(error)
       );
