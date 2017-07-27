@@ -14,6 +14,7 @@ export class AuthComponent implements OnInit {
   @ViewChild('f2') signupForm: NgForm;
   @ViewChild('f1') loginForm: NgForm;
   userName = '';
+  user: any[] = [];
 
   constructor(private modalService: ModalService, private authService: AuthService, private userService: UserService) { }
 
@@ -32,7 +33,7 @@ export class AuthComponent implements OnInit {
 
   // Wechseln zwischen den Tabs
   openTab(evt, sign_tab) {
-    let i, content, links;
+    let i, content;
     content = document.getElementsByClassName('tabcontent');
     for (i = 0; i < content.length; i++) {
       content[i].style.display = 'none';
@@ -55,6 +56,14 @@ export class AuthComponent implements OnInit {
       (response) => console.log(response),
       (error) => console.log(error)
       );
+    this.userService.getUser()
+      .subscribe(
+      (data: any[]) => {
+        this.user = data;
+        console.log(data);
+      },
+      (error) => console.log(error)
+      );
     this.signupForm.reset();
   }
 
@@ -62,6 +71,14 @@ export class AuthComponent implements OnInit {
   onLogin(form: NgForm) {
     const login_email = form.value.login_email;
     const login_password = form.value.login_password;
+    this.userService.getUser()
+      .subscribe(
+      (data: any[]) => {
+        this.user = data;
+        console.log(data);
+      },
+      (error) => console.log(error)
+      );
     this.authService.loginUser(login_email, login_password);
     this.loginForm.reset();
   }

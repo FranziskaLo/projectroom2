@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
 
   // Wechseln zwischen den Tabs
   openTab(evt, sign_tab) {
-    let i, content, links;
+    let i, content;
     content = document.getElementsByClassName('tabcontent');
     for (i = 0; i < content.length; i++) {
       content[i].style.display = 'none';
