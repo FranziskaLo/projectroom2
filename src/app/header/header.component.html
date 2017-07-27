@@ -1,10 +1,34 @@
-<nav class="navbar navbar-default header">
+<nav class="navbar navbar-default header hidden-sm hidden-xs">
   <div class="container-fluid">
     <div class="navbar-header">
       <a routerLink='/home' class="navbar-brand"><img class="room2logo" src="../assets/Logo-text-nachtblau.png" alt="room²" title="room²" /></a>
     </div>
     <div class="navbar-collapse">
-      <ul *ngIf="!isLandingPage() || (isLandingPage() && isSmallSize())" class="nav navbar-nav">
+      <ul *ngIf="!isLandingPage()" class="nav navbar-nav">
+        <app-header-searchbar></app-header-searchbar>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <a *ngIf="!authService.isAuthenticated()" class="header-link" (click)="openModal('register')">anmelden/registrieren</a>
+        <ng-template [ngIf]="authService.isAuthenticated()">
+          <div class="navi_o header-link">
+            <button class="btn dropbtn">Hallo {{ user.firstName }}!</button>
+            <div class="navi_o-content">
+              <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
+            </div>
+          </div>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-default header hidden-md hidden-lg hidden-xl">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink='/home' class="navbar-brand"><img class="room2logo" src="../assets/Logo-text-nachtblau.png" alt="room²" title="room²" /></a>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
         <app-header-searchbar></app-header-searchbar>
       </ul>
       <ul class="nav navbar-nav navbar-right">
