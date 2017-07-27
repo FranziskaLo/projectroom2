@@ -10,7 +10,7 @@ import { AuthService } from '../../shared/auth/auth.service';
   styles: []
 })
 export class LandlordInfosComponent implements OnInit {
-  room: { id: number, description: string, country: string, plz: string, location: string, hnr: string, street: string };
+  room: { id: number };
 
   constructor(private authService: AuthService, private route: ActivatedRoute, private roomService: RoomService) { }
 

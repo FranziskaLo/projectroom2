@@ -9,7 +9,7 @@ import { RoomService } from '../../shared/services/rooms/room.service';
   styles: []
 })
 export class RoomAttributesComponent implements OnInit {
-  room: { id: number, description: string, country: string, plz: string, location: string, hnr: string, street: string };
+  room: { id: number };
 
   constructor(private route: ActivatedRoute, private roomService: RoomService) { }
 

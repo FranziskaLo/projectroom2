@@ -13,7 +13,7 @@ import { RoomService } from '../../shared/services/rooms/room.service';
   styles: []
 })
 export class BookingSectionComponent implements OnInit {
-  room: { id: number, price: string };
+  room: { id: number };
 
   constructor(private modalService: ModalService, private authService: AuthService, private route: ActivatedRoute,
     private roomService: RoomService) { }

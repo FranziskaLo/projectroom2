@@ -12,7 +12,6 @@ export class RoomRotateComponent implements OnInit {
   pSelectedRoom = 2;
   mSelectedRoom = 1;
   nSelectedRoom = 0;
-  showRooms = true;
   roomPrevious: boolean;
   roomNext: boolean;
   isDataAvailable = false;

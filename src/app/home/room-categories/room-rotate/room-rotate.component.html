@@ -1,5 +1,5 @@
 <div class="row rotate" *ngIf="isDataAvailable">
-  <div class="room_rotate" *ngIf="showRooms">
+  <div class="room_rotate">
     <img src="{{ rooms[pSelectedRoom].roompic }}" (click)="loadPreviousRoom()" class="rotate_pic" style="filter: brightness(40%);"
     />
     <div class="rotate_info" (click)="loadPreviousRoom()">
@@ -10,7 +10,7 @@
     <div class="rotate_arrow_left" (click)="previous()">❮</div>
   </div>
 
-  <div class="room_rotate" *ngIf="showRooms" (click)="loadCurrentRoom()">
+  <div class="room_rotate" (click)="loadCurrentRoom()">
     <img src="{{ rooms[mSelectedRoom].roompic }}" class="rotate_pic" />
     <div class="rotate_info">
       <div class="rotate_detail1">{{ rooms[mSelectedRoom].name }}</div>
@@ -19,7 +19,7 @@
     </div>
   </div>
 
-  <div class="room_rotate" *ngIf="showRooms">
+  <div class="room_rotate">
     <img src="{{ rooms[nSelectedRoom].roompic }}" (click)="loadNextRoom()" class="rotate_pic" style="filter: brightness(40%);"
     />
     <div class="rotate_info" (click)="loadNextRoom()">
